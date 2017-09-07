@@ -1,0 +1,103 @@
+body{
+	font-family: "微软雅黑";
+}
+	#section_div1 button{
+		height: 50px;
+		width: 150px;
+		background: rgb(0,136,194);
+		border: none;
+		border-radius: 10px;
+		color: white;
+		margin-top: 40px;
+		font-size: 18px;
+
+	}
+	#section_div1 button:hover{
+		background: rgb(94,135,196);
+	}
+	#section_div1_a h2{
+		font-size: 40px;
+		font-weight: 300;
+		line-height: 70px;
+	}
+	#section_div1_a h4{
+		font-size: 18px;
+		font-weight: 300;
+		line-height: 25px;
+	}
+	#section_div1_a h5{
+		font-size: 16px;
+		font-weight: 100;
+	}
+	#section_div2{
+		text-align: center;
+		width: 94%;
+		margin: 30px auto;
+	}
+	#section_div2 a{
+		text-decoration: none;
+	}
+	.panel-body{
+		cursor: pointer;
+	}
+	#section_div2_div1 img{
+		width: 100%;
+		max-width: 511px;
+	}
+@media  screen and (min-width:992px ) {
+	#section_div1{
+	background-image: url(../image/image4/backal1.jpg);
+	height: 550px;
+	width: 100%;
+	background-size: cover;
+	background-color: black;
+	background-repeat: no-repeat; 
+	overflow: hidden;
+	color: white;
+    }
+    #section_div1_a{
+    	width: 520px;
+    	/*border: 1px solid black;*/
+    	margin-top: 180px;
+		margin-left: 90px;
+    }
+    #section_div1_b{
+    	display: none;
+    }
+}
+@media  screen and (max-width:992px ) {
+    #section_div1{
+	background-image: url(../image/image4/backal2.jpg);
+	height: 340px;
+	width: 100%;
+	background-size: cover;
+	background-color: black;
+	background-repeat: no-repeat; 
+	overflow: hidden;
+	color: white;
+    }
+    #section_div1_b{
+    	width: 90%;
+    	/*border: 1px solid black;*/
+		margin-left: 90px;
+		margin: 50px auto;
+    }
+    #section_div1_a{
+    	display: none;
+    }
+}
+@media  screen and (max-width:700px ) {
+	#section_div1{
+		height: 360px;
+	}
+}
+@media  screen and (max-width:540px ) {
+	#section_div1{
+		height: 38px;
+	}
+}
+@media  screen and (max-width:440px ) {
+	#section_div1{
+		height: 400px;
+	}
+}

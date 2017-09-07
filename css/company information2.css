@@ -1,0 +1,28 @@
+body{
+	font-family: "微软雅黑";
+}
+#section_div1{
+	width: 80%;
+	margin: 0 auto;
+	/*border: 1px solid black;*/
+}
+#section_div1 h1{
+	font-size: 34px;
+	line-height: 120px;
+}
+#section_div1 h3{
+	font-size: 16px;
+	line-height: 40px;
+	font-weight: bolder;
+}
+#section_div1 h4{
+	font-size: 16px;
+	line-height: 24px;
+	color: rgb(110,110,110);
+}
+@media  screen and (max-width:992px ) {
+    #section_div1{
+        width: 98%;
+    }
+
+}

@@ -1,0 +1,885 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width">
+		<title>自助建站-起飞页|所有套餐</title>
+		<script type="text/javascript" src="../js/jquery-1.11.3.js"></script>
+		<link rel="stylesheet" href="../dist/css/bootstrap.min.css" />
+		<script type="text/javascript" src="../dist/js/bootstrap.min.js"></script>
+	    <link rel="stylesheet" type="text/css" href="../css/summary.css"/>
+	<script type="text/javascript" src="../js/summary.js"></script>
+	
+		<style type="text/css">
+			.hd_d1 {
+				padding-top: 20px;
+				width: 100%;
+				height: 80px;
+				position: absolute;
+			}
+			
+			.hd_d1_tb {
+				width: 90%;
+				margin: auto;
+			}
+			
+			.hd_d1_tb td {
+				border: 0px solid white;
+			}
+			
+			.hd_d1_tb td a {
+				display: inline-block;
+				width: 52px;
+				height: 39px;
+				font-size: 18px;
+				color: white;
+				text-decoration: none;
+			}
+			
+			.tt {
+				width: 7%;
+			}
+			
+			.tt1 {
+				width: 10%;
+			}
+			
+			.tt2 {
+				text-align: right;
+				width: 7%;
+			}
+			
+			@media only screen and (max-width:768px) {
+				.hd_d1 {
+					display: none;
+				}
+			}
+			
+			.hd_d2 {
+			
+				color: white;
+				font-size: 16px;
+			}
+			
+			.hd_d2_tb {
+				width: 100%;
+				margin: auto;
+				background: black;
+				height: 50px;
+			}
+			
+			.hd_d2_tb2 {
+				width: 100%;
+				background: #0088c2;
+				height: 80px;
+				padding: 0px;
+				
+				
+			}
+			
+			.t1 {
+				text-align: left;
+				padding-left: 10px;
+			}
+			
+			.t2 {
+				text-align: right;
+				padding-right: 10px;
+			}
+			
+			.hd_d2_tb2_td1 {
+				padding-left: 15px;
+				width: 50%;
+				
+			}
+			
+			.hd_d2_tb2_td2 {
+				padding-right: 25px;
+				text-align: right;
+				width: 50%;
+			
+			}
+			
+			.hd_d2_tb_tr {
+				background: #0088c2;
+				width: 100%;
+			}
+			
+			.hd_d2_tb_tr p {
+				height: 20px;
+			}
+			
+			.hd_d2_tb_tr a {
+				color: black;
+				font-size: 18px;
+				line-height: 20px;
+			}
+			
+			.hd_d2_tb_tr_tb {
+				width: 100%;
+			}
+			
+			@media only screen and (min-width:768px) {
+				.hd_d2 {
+					display: none;
+				}
+			}
+			
+			#a2 {
+				display: block;
+			}
+			
+			#a3 {
+				display: none;
+			}
+			
+			
+			.xx1{
+				padding-top: 40px;
+				 width: 90%;margin: auto;border: 1px solid black;height: 360px;
+				 text-align: center;
+			}
+			.xx1_d1{
+				width: 66px;height: 66px;border-radius: 33px;background: #666666;margin: auto;text-align: center;line-height: 86px;
+			}
+			.xx1_d1_s1{
+				color: white;font-size: 40px;
+			}
+			.xx1:hover{
+				border: 1px solid #3ea2fd;
+			}
+			.xx1:hover .xx1_d1{
+				background: #3ea2fd;
+			} 
+			.xx1_sp1{
+				color:gray;
+				font-size: 22px;
+				font-weight: 500;
+				line-height: 80px;
+			}
+			.xx1:hover .xx1_sp1{
+				color: #3ea2fd;
+			}
+			.xx1 a{
+				color: gray;
+				font-size: 15px;
+				line-height: 25px;
+				text-decoration: none;
+				cursor: pointer;
+			}
+			.xx1 .xx1_a1{
+				color: gray;
+				font-size: 14px;
+				line-height: 105px;
+				text-decoration: none;
+				cursor: pointer;
+			}
+			.xx1 .xx1_a1:hover{
+				color:  #3ea2fd;
+			}
+			
+			
+			.foot1{
+	background: #2d2c2c;
+	border: 0px solid black;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	width: 100%;
+
+}
+.fot_d1{
+	padding-top: 30px;
+	width: 80%;
+	margin: auto;
+	border: 0px solid black;
+	height: 300px;
+
+		
+}
+.fot_d1 ul{
+	float: left;
+	list-style: none;
+}
+
+.fot_d1 ul a{
+	color: gray;font-size: 14px;font-weight: 400;
+	display: block;
+	padding-top: 10px;
+
+}
+.fot_d1 ul a:hover{
+	color: deepskyblue;
+}
+@media only screen and (min-width: 992px) {
+	.fot_d1 {
+		display: block;
+		
+	}
+}
+@media only screen and (max-width: 992px) {
+	.fot_d1 {
+		display: none;
+		
+	}
+}
+
+/*gensui*/
+.qw {
+	display: none;
+}
+
+@media only screen and (min-width: 0px) and (max-width: 768px) {
+	.qw {
+		display: block;
+		width: 100%;
+	}
+}
+
+@media only screen and (min-width: 768px) {
+	.qw {
+		display: none;
+		width: 100%;
+	}
+}
+
+.ul_d1 {
+	width: 175px;
+	height: 100px;
+	position: absolute;
+	top: 0px;
+	right: 0px;
+	padding-top: 30px;
+	text-align: right;
+	font-size: 16px;
+}
+
+.ul_d1 a {
+	color: white;
+	display: inline-block;
+	width: 40%;
+	padding-right: 25px;
+}
+
+.u1 li a {
+	color: white;
+}
+
+#cc img {
+	display: inline-block;
+	padding-bottom: 10px;
+}
+
+.d_tb td {
+	width: 80px;
+	text-align: center;
+}
+.d_tb td a{
+	text-decoration: none;
+}
+
+.s1 {
+	width: 0px;
+	display: block;
+	background: lightgray;
+	height: 2px;
+	margin: auto;
+}
+
+.d_tb td:hover .s1 {
+	width: 50px;
+}
+
+.dd {
+	height: 60px;
+	width: 100%;
+	background: rgba(0, 0, 0, 0.7);
+	padding-left: 20px;
+	position: fixed;
+	top: 0px;
+	display: none;
+}
+		</style>
+	</head>
+
+	<body style="overflow-x: hidden;">
+        <div class="hd_d1" style="z-index: 4;">
+            <table class="hd_d1_tb">
+                <tr>
+                    <td class="tt1">
+                        <a href="../html/homepage.html"><img src="../image/image4/logo.png" /></a>
+                    </td>
+                    <td class="tt">
+                        <a href="../html/homepage.html">首页</a>
+                    </td>
+                    <td class="tt">
+                        <a href="../html/template.html">模板</a>
+                    </td>
+                    <td class="tt">
+                        <a href="../html/package.html">套餐</a>
+                    </td>
+                    <td class="tt">
+                        <a href="../html/summary.html">概述</a>
+                    </td>
+                    <td class="tt">
+                        <a href="../html/case.html">案例</a>
+                    </td>
+                    <td class="tt">
+                        <a href="../html/course.html">教程</a>
+                    </td>
+                    <td></td>
+                    <td></td>
+                    <td class="tt2">
+                        <a href="denglu.html">登录</a>
+                    </td>
+                    <td class="tt2">
+                        <a href="zhuce.html">注册</a>
+                    </td>
+                </tr>
+            </table>
+        </div>
+        <div class="hd_d2">
+            <table class="hd_d2_tb" id="a1">
+                <tr>
+                    <td class="t1">教程</td>
+                    <td class="t2"> <span class="glyphicon glyphicon-chevron-down" style="color: white;"></span></td>
+                </tr>
+
+            </table>
+
+            <table class="hd_d2_tb2" id="a2">
+                <tr>
+                    <td class="hd_d2_tb2_td1" style="width: 350px;"><img src="../image/image4/logo.png" /></td>
+                    <td class="hd_d2_tb2_td2"><img src="../image/image4/logo2.png" style="width: 89px;height: 30px;" />
+                    </td>
+                </tr>
+            </table>
+
+            <table style="width: 100%;background:#0088c2 ;" class="hd_d2_tb_tr_tb" id="a3">
+                <tr class="hd_d2_tb_tr">
+                    <td style="padding-top: 10px;padding-left: 10px;">
+                        <p>
+                            <a href="../html/homepage.html" style="color: white;font-size: 18px;line-height: 20px;text-decoration: none;">首页</a>
+                        </p>
+                        <p>
+                            <a href="../html/template.html" style="color: white;font-size: 18px;line-height: 20px;text-decoration: none;">模板</a>
+                        </p>
+                        <p>
+                            <a href="../html/package.html" style="color: white;font-size: 18px;line-height: 20px;text-decoration: none;">套餐</a>
+                        </p>
+                        <p>
+                            <a href="../html/summary.html" style="color: white;font-size: 18px;line-height: 20px;text-decoration: none;">概述</a>
+                        </p>
+                        <p>
+                            <a href="../html/case.html" style="color: white;font-size: 18px;line-height: 20px;text-decoration: none;">案例</a>
+                        </p>
+                        <p>
+                            <a href="../html/course.html" style="color: white;font-size: 18px;line-height: 20px;text-decoration: none;">教程</a>
+                        </p>
+                    </td>
+                </tr>
+            </table>
+        </div>
+        <div class="dd" style="z-index: 10;">
+            <img src="../image/image4/logo3.png" width="160px" height="50px" style="float: left;" />
+            <table style="float: left;position: absolute;right: 50px;" class="d_tb">
+                <tr>
+                    <td>
+                        <a href="../html/homepage.html" style="color: white;display: inline-block;padding-top: 20px;font-size: 16px;">首页</a>
+                        <span class="s1"></span>
+                    </td>
+                    <td>
+                        <a href="../html/template.html" style="color: white;display: inline-block;padding-top: 20px;font-size: 16px;">模板</a>
+                        <span class="s1"></span></td>
+                    <td>
+                        <a href="../html/package.html" style="color: white;display: inline-block;padding-top: 20px;font-size: 16px;">
+                            套餐
+                        </a>
+                        <span class="s1" style="width: 50px;display: block;background: lightgray;height: 2px;margin: auto;"></span></td>
+                    <td>
+                        <a href="../html/summary.html" style="color: white;display: inline-block;padding-top: 20px;font-size: 16px;">概述</a>
+                        <span class="s1"></span>
+                    </td>
+                    <td>
+                        <a href="../html/case.html" style="color: white;display: inline-block;padding-top: 20px;font-size: 16px;">案例</a>
+                        <span class="s1"></span></td>
+                    <td>
+                        <a href="../html/course.html" style="color: white;display: inline-block;padding-top: 20px;font-size: 16px;">教程</a>
+                        <span class="s1"></span>
+                    </td>
+                </tr>
+            </table>
+        </div>
+
+
+
+        
+    <div id="select">
+	    <a href="#section_div1">
+	    	<div id="select_div1"></div>
+	    	<label id="label1">概述</label>
+	    </a>
+	    <a href="#section_div2">
+	    	<div id="select_div2"></div>
+	    	<label id="label2">海量模板</label>
+	    </a>
+	    <a href="#section_div3">
+	    	<div id="select_div3"></div>
+	    	<label id="label3">操作简单</label>
+	    </a>
+	    <a href="#section_div4">
+	    	<div id="select_div4"></div>
+	    	<label id="label4">加速技术</label>
+	    </a>
+	    <a href="#section_div5">
+	    	<div id="select_div5"></div>
+	    	<label id="label5">搜索优化</label>
+	    </a>
+	    <a href="#section_div6">
+	    	<div id="select_div6"></div>
+	    	<label id="label6">网络硬件</label>
+	    </a>
+	    <a href="#section_div7">
+	    	<div id="select_div7"></div>
+	    	<label id="label7">安全防护</label>
+	    </a>
+	    <a href="#section_div8">
+	    	<div id="select_div8"></div>
+	    	<label id="label8">代建服务</label>
+	    </a>
+	    <a href="#section_div9">
+	    	<div id="select_div9"></div>
+	    	<label id="label9">在线商城</label>
+	    </a>
+	    <a href="#section_div10">
+	    	<div id="select_div10"></div>
+	    	<label id="label10">套餐价格</label>
+	    </a>   
+	</div>
+
+
+
+    <div id="section" style="z-index: 0;">
+	    <div id="section_div1">
+	        <a name="section_div1"></a>
+	        <div id="section_div1_a">
+		    	<video autoplay="autoplay" loop="loop" id="video_1">
+				    <source src="../image/image4/gaishu.mp4" type="video/mp4" ></source>
+				</video>
+	    	</div>
+	    	<div id="section_div1_b" style="z-index: 1;">
+		    	<h4>每个网站，都应是一次优雅的演出</h4>
+		    	<h5>起飞页帮助您更轻松地登上互联网的舞台</h5>
+		    	<h5>真响应式 / 120款艺术品级模版 / 180个精美常用设计</h5>
+		    	<a href="../html/register.html"><button>现在注册</button></a>
+		    	<a href="#section_div2">了解更多∨</a>
+	    	</div>
+	    </div>
+	    <div id="section_div2">
+	    	<h2>120余款网站模版，每一款都是优雅的艺术品</h2>
+	    	<h5>每一个模版都经过设计、制作、测试、改进等多道工序，力求在达到赏心悦目的艺术视觉效果的同时，又容易定</h5>
+	    	<h5>
+	    	制改变。除此以外，多达180个精美的常用设计模式和30余个功能组件让您在自助建站时得心应手，事半功倍。</h5>
+	    	<a href="../html/register.html"><button id="btn1">现在注册</button></a>
+	    	<a href="../html/template.html"><button id="btn2">浏览模块</button></a>
+	    	<img src="../image/image4/gs1.jpg" style="width: 100%;">
+	    	<div style="height: 40px;"></div>
+	    </div>
+	    <div id="section_div3" class="container">
+	    	<div class="row">
+	    		<div class="col-lg-6 col-md-6 col-sm-12">
+	    			<img src="../image/image4/gs2.jpg" style="max-width: 100%;margin-top: 30px;">
+	    		</div>
+	    		<div class="col-lg-6 col-md-6 col-sm-12">
+	    			<img src="../image/image4/gs3.jpg" style="margin: auto;margin-top:60px;height: 43px;" id="section_div3_img1"><br>
+	    			<label>在起飞页自助建站平台，您不需要任何编程基础，就能做出功能强大，效果出众的专业级网站，您所要做的仅是选择网站模板、输入图片文字，以及鼠标拖拉拽；真正的响应式建站，无论是在电脑的大屏幕，还是手机小屏幕上，网站都能友好地展示；您的访客还可以注册成为会员，并进行在线购物；当然，如果您需要多语言版本，起飞页也可以轻松为您实现。</label>
+	    			<a href="../html/register.html"><button id="btn3">现在注册</button></a>
+	    			<a href="../html/template.html"><button id="btn4">浏览模块</button></a>
+	    		</div>
+	    	</div>
+	    </div>
+	    <div style="height: 100px;background: rgb(240,240,240);"></div>
+	    <div id="section_div4" style="width: 100%;" class="container">
+	    	<div class="row" id="section_div4_a">
+	    		<div class="col-lg-4 col-md-4 col-sm-4" style="background: black;">
+	    			<img src="../image/image4/a1.png">
+	    			<h4>CDN发布</h4>
+	    		</div>
+	    		<div class="col-lg-4 col-md-4 col-sm-4" style="background: rgb(33,33,33);">
+	    			<img src="../image/image4/a2.png">
+	    			<h4>多层缓存</h4>
+	    		</div>
+	    		<div class="col-lg-4 col-md-4 col-sm-4" style="background: black;">
+	    			<img src="../image/image4/a3.png">
+	    			<h4>页面压缩</h4>
+	    		</div>
+	    	</div>
+	    	<div class="row" style="height: 320px;background: rgb(66,66,66);text-align: center;">
+	    	    <label style="font-size: 40px;color: white;font-weight: 100;margin-top: 70px;">1秒打开，快得有点狠</label><br>
+	    		<label style="color: rgb(169,169,169);">超高性能云服务器和云网络，CPU提速90%，内存提速50%，IO处理提速200%，网速提高100%</label><br>
+	    		<a href="../html/register.html"><button id="btn5">现在注册</button></a>
+	    	</div>
+	    	<div class="row" id="section_div4_b">
+	    		<div class="col-lg-4 col-md-4 col-sm-4" style="background: black;">
+	    			<img src="../image/image4/a4.png">
+	    			<h4>JS/CSS文件合并</h4>
+	    		</div>
+	    		<div class="col-lg-4 col-md-4 col-sm-4" style="background: rgb(33,33,33);">
+	    			<img src="../image/image4/a5.png">
+	    			<h4>DNS云解析</h4>
+	    		</div>
+	    		<div class="col-lg-4 col-md-4 col-sm-4" style="background: black;">
+	    			<img src="../image/image4/a6.png">
+	    			<h4>图片无损压缩</h4>
+	    		</div>
+	    	</div>
+	    </div>
+	    <div id="section_div5">
+	    	<h2>全面的搜索引擎优化，轻松获得更高排名</h2>
+	    	<h5>谁说自助建站的SEO效果就一定差？</h5>
+	    	<h5>无需额外设置，平台自动为您生成网站地图（sitemap），帮助搜索引擎全面地对网站进行索引；</h5>
+	    	<h5>同时，页面标题、页面描述以及静态化链接技术也可以帮助您更加轻松地获得较高的关键词排名。</h5>
+	    	<div class="container">
+	    	    <div class="row">
+		    		<div class="col-lg-3 col-md-3 col-sm-6 col-lg-offset-0 col-md-offset-0 col-sm-offset-3 col-xs-8 col-xs-offset-2">
+		    			<img src="../image/image4/google.jpg">
+		    		</div>
+		    		<div class="col-lg-3 col-md-3 col-sm-6 col-lg-offset-0 col-md-offset-0 col-sm-offset-3 col-xs-8 col-xs-offset-2">
+		    			<img src="../image/image4/baidu.jpg">
+		    		</div>
+		    		<div class="col-lg-3 col-md-3 col-sm-6 col-lg-offset-0 col-md-offset-0 col-sm-offset-3 col-xs-8 col-xs-offset-2">
+		    			<img src="../image/image4/360.jpg">
+		    		</div>
+		    		<div class="col-lg-3 col-md-3 col-sm-6 col-lg-offset-0 col-md-offset-0 col-sm-offset-3 col-xs-8 col-xs-offset-2">
+		    			<img src="../image/image4/shougou.jpg">
+		    		</div>
+		    		
+	    		</div>
+	    		<div class="row">
+		    		<div class="col-lg-6 col-lg-offset-3 col-md-6 col-md-offset-3 col-sm-6 col-sm-offset-3 col-xs-12">
+			    			<img src="../image/image4/SEO.jpg">
+		    		</div>
+		        </div>
+	    	</div>
+	    	<a href="../html/register.html"><button id="btn6">现在注册</button></a>
+	    	<a href="../html/template.html#"><button id="btn7">浏览模块</button></a>
+	    </div>
+	    <div id="section_div6">
+	        <div style="height: 190px;"></div>
+	    	<div id="section_div6_div1">
+	    		<h2>服务器&网络&全球部署</h2>
+	    		<h5>起飞页自助建站平台全面采用第二代云服务器和云网络。其中，服务器硬件使用最新Xeon处理器、32个物理CPU核心、RAID10存储、ECC内存、SSD硬盘，高配服务器在提供超高性能的同时，更可减少出错几率；另外，优质、昂贵的中港加速网络确保您在大陆地区也可以迅速稳定地打开香港的网站。起飞页拥有中国大陆、中国香港以及全球3个海外云节点可供选择，将网站一键部署到距离客户最近的国家和地区。</h5>
+	    		<a href="../html/register.html"><button id="btn8">现在注册</button></a>
+	    		<a href="../html/template.html"><button id="btn9">浏览模块</button></a>
+	    		<div style="height: 100px;"></div>
+	    	</div>
+	    	<div style="height: 190px;"></div>
+	    </div>
+	    <div id="section_div7">
+	    	<h2>数据安全、托管和容灾备份</h2>
+	    	<h5>高防护、智能化服务器防火墙技术，主动识别攻击扫描，提供7*24小时的全天候实时监控。我们采用先进、成熟的网站安全保护措施，可防病毒、反黑客或木马，保证您的网站永远处于安全稳定的状态。我们了解您的数据无比珍贵，因此，起飞页每天为客户网站的所有数据进行2个异地远程备份，这样即使服务器机房出现重大故障，我们也能为您找回珍贵的数据。</h5>
+	    	<a href="../html/register.html"><button id="btn10">现在注册</button></a>
+	    	<a href="../html/template.html"><button id="btn11">浏览模块</button></a>
+	    	<img src="../image/image4/robot.jpg" style="width: 60%;">
+	    	<div style="height: 40px;"></div>
+	    </div>
+	    <div id="section_div8">
+	        <div style="height: 260px;"></div>
+	    	<h2>数据安全、托管和容灾备份</h2>
+	    	<h5>高防护、智能化服务器防火墙技术，主动识别攻击扫描，提供7*24小时的全天候实时监控。我们采用先进、成熟的网站安全保护措施，可防病毒、反黑客或木马，保证您的网站永远处于安全稳定的状态。我们了解您的数据无比珍贵，因此，起飞页每天为客户网站的所有数据进行2个异地远程备份，这样即使服务器机房出现重大故障，我们也能为您找回珍贵的数据。</h5>
+	    	<a href="../html/register.html"><button id="btn12">现在注册</button></a>
+	    	<a href="../html/template.html"><button id="btn13">浏览模块</button></a>
+	    	<div style="height: 260px;"></div>
+	    </div>
+	    <div id="section_div9" class="container">
+	    	<div class="row" style="width: 95%;margin: 0 auto;">
+	    		<div class="col-lg-6 col-md-6 col-sm-12">
+	    		    <h2>强大商城，电商平台专家</h2>
+	    			<label>在起飞页自助建站平台，仅需1200元，就能拥有属于您的电商网站。支持支付宝、微信等支付网关，手机和计算机上结账同样方便。起飞页还支持PayPal和Stripe等境外支付网关，让您轻松成为跨境电商。</label><br>
+	    			<label>灵活的商品属性自定义功能、订阅功能可以让您在网站上销售任何产品或者服务；多种促销、折扣方式，帮助您根据季节或会员等级制订不同的销售策略，让产品大卖特卖；一目了然的报表功能，让您随时掌握各种销售数据和用户动态，运筹帷幄，决胜千里。</label>
+	    			<a href="../html/register.html"><button id="btn14">现在注册</button></a>
+	    			<a href="../html/template.html"><button id="btn15">浏览模块</button></a>
+	    		</div>
+	    		<div class="col-lg-6 col-md-6 col-sm-12">
+	    			<img src="../image/image4/backgs3.jpg" style="max-width: 100%;margin-top: 30px;">
+	    		</div>
+	    	</div>
+	    </div>
+	    <div id="section_div10" class="container">
+	        <div style="height: 90px;"></div>
+	    	<h2>真正0元起，轻松拥有网站</h2>
+	    	<h5>根据不同需求和预算，我们制定了多种套餐。无论是个人还是大型企业，均能获得最高性价比的产品和服务，最低仅需0元起。</h5>
+	    	<a href="../html/register.html"><button id="btn16">现在注册</button></a>
+	    	<a href="../html/template.html"><button id="btn17">浏览模块</button></a>
+	    	<div style="height: 40px;"></div>
+	    	<div class="row" id="row_n">
+	    		<div class="col-lg-3 col-md-3 col-sm-12">
+		    		<div id="row_1">
+		    		    <div style="height: 55px;background: rgb(144,144,144);border-radius: 10px 10px 0 0;">
+		    		    	<h3>免费版</h3>
+		    		    </div>
+		    		    <div style="height: 50px;border-bottom: 2px solid rgb(204,204,204)">
+		    		    	<h4>适用于简单网站或评估目的</h4>
+		    		    </div>
+		    		    <div style="height: 190px;border-bottom: 2px solid rgb(204,204,204)">
+			    		    <h1 id="hh0">0<h2>元/年</h2></h1>
+			    		    <button>创建网站</button>
+		    		    </div>
+		    		    <div style="text-align: left;width: 90%;margin: 20px auto;">
+		    		    	<label>域名：需另外购买</label><br>
+		    		    	<label>支持设备： <img src="../image/image4/logol1.png"><img src="../image/image4/logol2.png"><img src="../image/image4/logol3.png"></label><br>
+		    		    	<label>空间：200M</label><br>
+		    		    	<label>流量：1G/每月</label><br>
+		    		    	<label>商城：不支持</label><br>
+		    		    	<label>自动备份：无</label><br>
+		    		    	<label>技术支持：邮件</label><br>
+		    		    	<h5></h5>
+		    		    </div>
+		    		</div>
+	    		</div>
+	    		<div class="col-lg-3 col-md-3 col-sm-12">
+		    		<div id="row_2">
+                        <div style="height: 55px;background: rgb(144,144,144);border-radius: 10px 10px 0 0;">
+		    		    	<h3>起飞版</h3>
+		    		    </div>
+		    		    <div style="height: 50px;border-bottom: 2px solid rgb(204,204,204)">
+		    		    	<h4>适用于个人或微型企业</h4>
+		    		    </div>
+		    		    <div style="height: 190px;border-bottom: 2px solid rgb(204,204,204)">
+			    		    <h1>365<h2>元/年</h2></h1>
+			    		    
+			    		    <button>创建网站</button>
+		    		    </div>
+		    		    <div style="text-align: left;width: 90%;margin: 20px auto;">
+		    		    	<label>域名：需另外购买</label><br>
+		    		    	<label>支持设备： <img src="../image/image4/logol1.png"><img src="../image/image4/logol2.png"><img src="../image/image4/logol3.png"><img src="../image/image4/logol4.png"></label><br>
+		    		    	<label>空间：1G</label><br>
+		    		    	<label>流量：5G/每月</label><br>
+		    		    	<label>商城：不支持</label><br>
+		    		    	<label>自动备份：每日自动备份<img src="../image/image4/logol5.png"></label><br>
+		    		    	<label>技术支持：邮件/QQ/电话</label><br>
+		    		    	<h6>代建服务：一次性购买3年立享95折，并赠送200元(5个页面)的网站代建服务。</h6>
+		    		    </div>
+		    		</div>
+	    		</div>
+	    		<div class="col-lg-3 col-md-3 col-sm-12">
+		    		<div id="row_3">
+                        <div style="height: 55px;background: rgb(53,53,53);border-radius: 10px 10px 0 0;">
+		    		    	<h3>翱翔版</h3>
+		    		    </div>
+		    		    <div style="height: 50px;border-bottom: 2px solid rgb(204,204,204)">
+		    		    	<h4>最受欢迎套餐</h4>
+		    		    </div>
+		    		    <div style="height: 190px;border-bottom: 2px solid rgb(204,204,204)">
+			    		    <h1>600<h2>元/年</h2></h1>
+			    		    
+			    		    <button>创建网站</button>
+		    		    </div>
+		    		    <div style="text-align: left;width: 90%;margin: 20px auto;">
+		    		    	<label>域名：赠送国际域名<img src="../image/image4/logol5.png"></label><br>
+		    		    	<label>支持设备： <img src="../image/image4/logol1.png"><img src="../image/image4/logol2.png"><img src="../image/image4/logol3.png"><img src="../image/image4/logol4.png"></label><br>
+		    		    	<label>空间：2G</label><br>
+		    		    	<label>流量：10G/每月</label><br>
+		    		    	<label>商城：不支持</label><br>
+		    		    	<label>自动备份：每日自动备份<img src="../image/image4/logol5.png"></label><br>
+		    		    	<label>技术支持：邮件/QQ/电话</label><br>
+		    		    	<h6>代建服务：一次性购买3年立享95折，并赠送400元(10个页面)的网站代建服务。</h6>
+		    		    </div>
+		    		</div>
+	    		</div>
+		    	<div class="col-lg-3 col-md-3 col-sm-12">
+		    		<div id="row_4">
+		    			<div style="height: 55px;background: rgb(144,144,144);border-radius: 10px 10px 0 0;">
+		    		    	<h3>太空版</h3>
+		    		    </div>
+		    		    <div style="height: 50px;border-bottom: 2px solid rgb(204,204,204)">
+		    		    	<h4>适用于中型企业或机构</h4>
+		    		    </div>
+		    		    <div style="height: 190px;border-bottom: 2px solid rgb(204,204,204)">
+			    		    <h1>1200<h2>元/年</h2></h1>
+			    		    
+			    		    <button>创建网站</button>
+		    		    </div>
+		    		    <div style="text-align: left;width: 90%;margin: 20px auto;">
+		    		    	<label>域名：赠送国际域名<img src="../image/image4/logol5.png"></label><br>
+		    		    	<label>支持设备： <img src="../image/image4/logol1.png"><img src="../image/image4/logol2.png"><img src="../image/image4/logol3.png"><img src="../image/image4/logol4.png"></label><br>
+		    		    	<label>空间：4G</label><br>
+		    		    	<label>流量：不限</label><br>
+		    		    	<label>邮箱：赠送5G邮箱1个</label><br>
+		    		    	<label>商城：年交易额累计不超过50万元</label><br>
+		    		    	<label>自动备份：每日自动备份<img src="../image/image4/logol5.png"></label><br>
+		    		    	<label>技术支持：邮件/QQ/电话</label><br>
+		    		    	<h6 style="text-align: left;">代建服务：一次性购买3年立享95折，并赠送800元(30个页面)的网站代建服务。</h6>
+		    		    </div>
+	    		    </div>
+	    		</div>
+	    	</div>
+	    </div>
+    </div>
+    
+	<div class="foot1" style="margin-top: 50px;">
+			<div class="fot_d1">
+
+				<ul style="width: 40%;">
+					<li style="color: white;font-size: 20px;font-weight: 500;">起飞页 · 优雅做网站</li>
+					<li>&nbsp;</li>
+					<li style="max-width: 380px;color: gray;font-size: 14px;font-weight: 400;">一款简洁美观的自助建站平台，一种轻松优雅的网站制作方式，解决互联网20年发展路上的古老难题——建站。</li>
+					<li>&nbsp;</li>
+					<li style="color: white;font-size: 14px;font-weight: 400;">QQ 客服： 800088546</li>
+					<li style="color: white;font-size: 14px;font-weight: 400;">客服热线： 4006-285-729 或 0512-62969169</li>
+					<li>&nbsp;</li>
+					<li style="color: white;font-size: 14px;font-weight: 400;">合作伙伴：</li>
+					<li><img src="../image/image4/paypal.png" width="92px" height="32px" /><img src="../image/image4/alilogo.png" width="59px" height="33px" /></li>
+				</ul>
+				<ul style="width: 20%;">
+					<li style="color: white;font-size: 14px;font-weight: 400;">公司信息</li>
+					<li>
+						<a href="../html/company information1.html">公司介绍</a>
+					</li>
+					<li>
+						<a href="../html/company information2.html">服务条款</a>
+					</li>
+					<li>
+						<a href="../html/company information3.html">法律声明</a>
+					</li>
+					<li>
+						<a href="../html/company information4.html">可接受服务</a>
+					</li>
+					<li>
+						<a href="../html/company information5.html">免责声明</a>
+					</li>
+				</ul>
+				<ul style="width: 20%;">
+
+					<li style="color: white;font-size: 14px;font-weight: 400;">技术支持</li>
+					<li>
+						<a href="../html/technical support1.html">联系客服</a>
+					</li>
+					<li>
+						<a href="../html/technical support2.html">知识库</a>
+					</li>
+					<li>
+						<a href="../html/technical support3.html">更新日志</a>
+					</li>
+					<li>
+						<a href="../html/technical support4.html">建站商城</a>
+					</li>
+					<li>
+						<a href="../html/technical support5.html">博客</a>
+					</li>
+				</ul>
+				<ul style="width: 20%;">
+					<li style="color: white;font-size: 14px;font-weight: 400;">公司信息</li>
+					<li>
+						<a href="../html/technical support4.html">购买套餐服务</a>
+					</li>
+					<li>
+						<a href="../html/fast entry2.html">提交域名备案流程</a>
+					</li>
+					<li>
+						<a href="../html/fast entry3.html">申请域名设定服务</a>
+					</li>
+					<li>
+						<a href="http://www.alltoall.net/">在线格式转换</a>
+					</li>
+				</ul>
+
+			</div>
+			<p style="width: 80%;margin: auto;text-align: center;color: lightgray;">拓展您的业务，展示您的风采，或者只是尝试一下新的想法。</p>
+			<p style="width: 80%;margin: auto;text-align: center;color: lightgray;">
+				<a style="color: lightgray;">起飞页自助建站平台</a>，拉近您与互联网的距离！</p>
+			<p style="height: 14px;"></p>
+			<p style="width: 95%;margin: auto;text-align: center;color: lightgray;">版权所有 2013-2016 苏州卡达网络科技有限公司 增值电信业务经营许可证苏B2-20150321 苏ICP备09008221号-3 版本: V3.6</p>
+			<div style="position: relative;left: 95%;top: -10px;">
+				<a href="#"><span class="glyphicon glyphicon-chevron-up" style="color: white;"></span></a>
+			</div>
+		</div>
+
+		<script type="text/javascript">
+			var a = 0;
+
+			$("#a1").click(function() {
+				console.log("11")
+				if(window.innerWidth < 768) {
+					if(a == 0) {
+
+						$(".t1").html("关闭")
+						$("#a2").css({
+							"display": "none"
+						});
+						$("#a3").css({
+							"display": "block"
+						});
+
+					} else {
+						$(".t1").html("教程")
+						$("#a2").css({
+							"display": "block"
+						});
+						$("#a3").css({
+							"display": "none"
+						});
+
+					}
+					a++;
+					if(a > 1) {
+						a = 0
+					}
+					return a;
+				}
+			})
+			
+			$(document).scroll(function() {
+								console.log($(document).scrollTop())
+								if(window.innerWidth > 768) {
+									if($(document).scrollTop() >= 300) {
+
+										$(".dd").css({
+											"display": "block"
+										})
+									} else {
+										$(".dd").css({
+											"display": "none"
+										})
+									}
+								} else {
+									$(".dd").css({
+										"display": "none"
+									})
+								}
+
+							});
+
+
+							window.onresize = function() {
+								console.log(window.innerWidth);
+								if(window.innerWidth >= 768) {
+									if(window.innerWidth >= 768 && window.innerWidth <= 997 && $(document).scrollTop() >= 300) {
+										$(".dd").css({
+											"display": "block"
+										})
+										$(".dd table").css({
+											"display": "none"
+										})
+									}
+									if(window.innerWidth >= 997 && $(document).scrollTop() >= 300) {
+										$(".dd").css({
+											"display": "block"
+										})
+										$(".dd table").css({
+											"display": "block"
+										})
+									}
+
+
+								} else {
+									$(".dd").css({
+										"display": "none"
+									})
+								}
+							}
+		</script>
+
+	</body>
+
+</html>

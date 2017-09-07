@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<script type="text/javascript" src="../js/jquery-2.1.0.js"></script>
+		<script type="text/javascript">
+			window.onload = function() {
+				$.ajax({
+					type: "get",
+					url: "http://apis.baidu.com/txapi/weixin/wxhot",
+					data:{"num":"10","rand":"1","word":"盗墓笔记","page":"1","src":"人民日报"},
+					headers : {'apikey':'b8ad0e397e5bd25915693d77db970af7'},
+					success: function(data) {
+            console.log(data);
+            $(".d1").html(data.code)
+					},
+					error: function() {
+                 
+					}
+				});
+			}
+		</script>
+		<title></title>
+	</head>
+
+	<body>
+		<div class="d1"></div>
+		<!--<div class="d1"></div>
+		<div class="d1"></div>
+		<div class="d1"></div>-->
+		<div></div>
+		<div></div>
+		<div></div>
+	</body>
+
+</html>

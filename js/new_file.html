@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script type="text/javascript" src="jquery-1.11.3.js">
+			
+		</script>
+	</head>
+	<body>
+		<div id="d1" style="width: 100px;height: 122px;background-color: black;"></div>
+		<div id="d1" style="width: 100px;height: 122px;background-color: black;"></div>
+		<div id="d1" style="width: 100px;height: 122px;background-color: black;"></div>
+		<div id="d1" style="width: 100px;height: 122px;background-color: black;"></div>
+		<div id="d1" style="width: 100px;height: 122px;background-color: black;"></div>
+		<div id="d1" style="width: 100px;height: 122px;background-color: black;"></div>
+		<div id="d1" style="width: 100px;height: 122px;background-color: black;"></div>
+		<div id="d1" style="width: 100px;height: 122px;background-color: black;"></div>
+		<div id="d1" class="cantsee" style="width: 100px;height: 122px;background-color: blue;visibility: hidden;"></div>
+		<div id="d1" class="cantsee" style="width: 100px;height: 122px;background-color: blue;visibility: hidden;"></div>
+		<div id="d1" class="cantsee" style="width: 100px;height: 122px;background-color: blue;visibility: hidden;"></div>
+		<div id="d1" class="cantsee" style="width: 100px;height: 122px;background-color: black;visibility: hidden;"></div>
+		<div class="cantsee" id="d1" style="width: 100px;height: 122px;background-color: blue;visibility: hidden;"></div>
+		<div id="d1" class="cantsee" style="width: 100px;height: 122px;background-color: black;visibility: hidden;"></div>
+		<div id="d1" class="cantsee" style="width: 100px;height: 122px;background-color: black;visibility: hidden;"></div>
+		<div id="d1" class="cantsee" style="width: 100px;height: 122px;background-color: blue;visibility: hidden;"></div>
+		<script type="text/javascript">
+			$(window).scroll(function(){
+				var height = $("div[class='cantsee']:eq(0)").offset().top;
+				console.log(height);
+				console.log($(window).scrollTop());
+				console.log($("div[class='cantsee']:eq(0)"));
+				if($(window).scrollTop() >= height-550){
+					var timer = setTimeout(function(){
+						$("div[class='cantsee']:eq(0)").css("visibility","visible");
+						$("div[class='cantsee']:eq(0)").removeAttr("class");
+					},3000,function(){
+						clearTimeout(timer);
+						timer = null;
+					});
+				}
+			});
+				
+		</script>
+	</body>
+</html>

@@ -1,0 +1,509 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width">
+		<title>自助建站-起飞页|所有套餐</title>
+		<script type="text/javascript" src="../js/jquery-2.1.0.js"></script>
+		<link rel="stylesheet" href="../dist/css/bootstrap.min.css" />
+		<script type="text/javascript" src="../dist/js/bootstrap.min.js"></script>
+		<link rel="stylesheet" type="text/css" href="../css/taocan.css" />
+		<script src="../js/gensuidaohang.js" type="text/javascript" charset="utf-8"></script>
+		<style type="text/css">
+			.hd_d1 {
+				padding-top: 20px;
+				width: 100%;
+				height: 80px;
+				background: #333333;
+			}
+			
+			.hd_d1_tb {
+				width: 90%;
+				margin: auto;
+			}
+			
+			.hd_d1_tb td {
+				border: 0px solid white;
+			}
+			
+			.hd_d1_tb td a {
+				display: inline-block;
+				width: 52px;
+				height: 39px;
+				font-size: 18px;
+				color: white;
+				text-decoration: none;
+			}
+			
+			.tt {
+				width: 7%;
+			}
+			
+			.tt1 {
+				width: 10%;
+			}
+			
+			.tt2 {
+				text-align: right;
+				width: 7%;
+			}
+			
+			@media only screen and (max-width:768px) {
+				.hd_d1 {
+					display: none;
+				}
+			}
+			
+			.hd_d2 {
+			
+				color: white;
+				font-size: 16px;
+			}
+			
+			.hd_d2_tb {
+				width: 100%;
+				margin: auto;
+				background: black;
+				height: 50px;
+			}
+			
+			.hd_d2_tb2 {
+				width: 100%;
+				background: #0088c2;
+				height: 80px;
+				padding: 0px;
+				
+				
+			}
+			
+			.t1 {
+				text-align: left;
+				padding-left: 10px;
+			}
+			
+			.t2 {
+				text-align: right;
+				padding-right: 10px;
+			}
+			
+			.hd_d2_tb2_td1 {
+				padding-left: 15px;
+				width: 50%;
+				
+			}
+			
+			.hd_d2_tb2_td2 {
+				padding-right: 25px;
+				text-align: right;
+				width: 50%;
+			
+			}
+			
+			.hd_d2_tb_tr {
+				background: #0088c2;
+				width: 100%;
+			}
+			
+			.hd_d2_tb_tr p {
+				height: 20px;
+			}
+			
+			.hd_d2_tb_tr a {
+				color: black;
+				font-size: 18px;
+				line-height: 20px;
+			}
+			
+			.hd_d2_tb_tr_tb {
+				width: 100%;
+			}
+			
+			@media only screen and (min-width:768px) {
+				.hd_d2 {
+					display: none;
+				}
+			}
+			
+			#a2 {
+				display: block;
+			}
+			
+			#a3 {
+				display: none;
+			}
+			
+			
+			.xx1{
+				padding-top: 40px;
+				 width: 90%;margin: auto;border: 1px solid black;height: 360px;
+				 text-align: center;
+			}
+			.xx1_d1{
+				width: 66px;height: 66px;border-radius: 33px;background: #666666;margin: auto;text-align: center;line-height: 86px;
+			}
+			.xx1_d1_s1{
+				color: white;font-size: 40px;
+			}
+			.xx1:hover{
+				border: 1px solid #3ea2fd;
+			}
+			.xx1:hover .xx1_d1{
+				background: #3ea2fd;
+			} 
+			.xx1_sp1{
+				color:gray;
+				font-size: 22px;
+				font-weight: 500;
+				line-height: 80px;
+			}
+			.xx1:hover .xx1_sp1{
+				color: #3ea2fd;
+			}
+			.xx1 a{
+				color: gray;
+				font-size: 15px;
+				line-height: 25px;
+				text-decoration: none;
+				cursor: pointer;
+			}
+			.xx1 .xx1_a1{
+				color: gray;
+				font-size: 14px;
+				line-height: 105px;
+				text-decoration: none;
+				cursor: pointer;
+			}
+			.xx1 .xx1_a1:hover{
+				color:  #3ea2fd;
+			}
+		</style>
+	</head>
+
+	<body style="overflow-x: hidden;">
+		<div class="hd_d1">
+			<table class="hd_d1_tb">
+				<tr>
+					<td class="tt1">
+						<a href="../html/homepage.html"><img src="../image/Wimg/1.png" /></a>
+					</td>
+					<td class="tt">
+						<a href="../html/homepage.html">首页</a>
+					</td>
+					<td class="tt">
+						<a href="../html/template.html">模板</a>
+					</td>
+					<td class="tt">
+						<a href="../html/package.html">套餐</a>
+					</td>
+					<td class="tt">
+						<a href="../html/summary.html">概述</a>
+					</td>
+					<td class="tt">
+						<a href="../html/case.html">案例</a>
+					</td>
+					<td class="tt">
+						<a href="../html/course.html">教程</a>
+					</td>
+					<td></td>
+					<td></td>
+					<td class="tt2">
+						<a href="entry">登录</a>
+					</td>
+					<td class="tt2">
+						<a href="register">注册</a>
+					</td>
+				</tr>
+			</table>
+		</div>
+		<div class="hd_d2">
+			<table class="hd_d2_tb" id="a1">
+				<tr>
+					<td class="t1">教程</td>
+					<td class="t2"> <span class="glyphicon glyphicon-chevron-down" style="color: white;"></span></td>
+				</tr>
+
+			</table>
+
+			<table class="hd_d2_tb2" id="a2">
+				<tr>
+					<td class="hd_d2_tb2_td1" style="width: 350px;"><img src="../image/Wimg/1.png" /></td>
+					<td class="hd_d2_tb2_td2"><img src="../image/Wimg/3.png" style="width: 89px;height: 30px;" />
+					</td>
+				</tr>
+			</table>
+
+			<table style="width: 100%;background:#0088c2 ;" class="hd_d2_tb_tr_tb" id="a3">
+				<tr class="hd_d2_tb_tr">
+					<td style="padding-top: 10px;padding-left: 10px;">
+						<p>
+							<a href="" style="color: white;font-size: 18px;line-height: 20px;text-decoration: none;">首页</a>
+						</p>
+						<p>
+							<a href="" style="color: white;font-size: 18px;line-height: 20px;text-decoration: none;">模板</a>
+						</p>
+						<p>
+							<a href="" style="color: white;font-size: 18px;line-height: 20px;text-decoration: none;">套餐</a>
+						</p>
+						<p>
+							<a href="" style="color: white;font-size: 18px;line-height: 20px;text-decoration: none;">概述</a>
+						</p>
+						<p>
+							<a href="" style="color: white;font-size: 18px;line-height: 20px;text-decoration: none;">案例</a>
+						</p>
+						<p>
+							<a href="" style="color: white;font-size: 18px;line-height: 20px;text-decoration: none;">教程</a>
+						</p>
+					</td>
+				</tr>
+			</table>
+		</div>
+		<!--shenti-->
+		<div style="width: 100%;" style="padding-bottom: 100px;">
+			<div style="width: 40%;margin: auto;text-align: center;">
+				<h1 style="color: black;">搜索教程</h1>
+			</div>
+			<div style="width: 60%;margin: auto;text-align: center;margin-top: 20px;text-align: center;padding-bottom: 60px;">
+				<form class="bs-example bs-example-form" role="form">
+
+					<div class="input-group" style="height: 50px;">
+						<input type="text" class="form-control" placeholder="请输入您需的问题：" style="height: 50px;">
+						<span class="input-group-addon" style="background: #3ea3ff;font-size: 25px;color: white;line-height: 30px;">搜索</span>
+					</div>
+
+				</form>
+				<span style="color: gray;font-size: 15px;">您可以在搜索框中使用空格、加号或者星号， 例如：”绑定 域名”，”设置+邮箱”, “商城*设置”</span>
+			</div>
+			
+			<div class="container" style="padding-left: 80px;padding-right: 80px;">
+				<div class="row">
+					<div class="col-md-4">
+						<div class="xx1">
+							<div class="xx1_d1" style="">
+								<span class="glyphicon glyphicon-plane xx1_d1_s1" style=""></span>
+							</div>
+							<span class="xx1_sp1">快速入门</span><br />
+							<a> 5分钟快速入门</a><br />
+							<a> 如何创建一个新网站</a><br />
+							<a> 如何开始编辑网站</a><br />
+							<a class="xx1_a1"> 查看全部</a><br />
+						</div>
+					</div>
+					<div class="col-md-4">
+						<div class="xx1">
+							<div class="xx1_d1" style="">
+								<span class="glyphicon glyphicon-link xx1_d1_s1" style=""></span>
+							</div>
+							<span class="xx1_sp1">绑定域名</span><br />
+							<a> 如何绑定域名？</a><br />
+							<a> 如何购买域名？</a><br />
+							<a> &nbsp;</a><br />
+							<a class="xx1_a1"> 查看全部</a><br />
+						</div>
+					</div>
+					<div class="col-md-4">
+						<div class="xx1">
+							<div class="xx1_d1" style="">
+								<span class="glyphicon glyphicon-wrench xx1_d1_s1" style=""></span>
+							</div>
+							<span class="xx1_sp1">设计网页</span><br />
+							<a> 如何修改页面布局？</a><br />
+							<a> 如何设置页面的背景？</a><br />
+							<a> 怎样添加页面内容？</a><br />
+							<a class="xx1_a1"> 查看全部</a><br />
+						</div>
+					</div>
+				</div>
+				<div class="row" style="margin-top: 40px;">
+					<div class="col-md-4">
+						<div class="xx1">
+							<div class="xx1_d1" style="">
+								<span class="glyphicon glyphicon-send xx1_d1_s1" style=""></span>
+							</div>
+							<span class="xx1_sp1">SEO相关</span><br />
+							<a> SEO基础设置</a><br />
+							<a> SEO进阶设置</a><br />
+							<a>&nbsp;</a><br />
+							<a class="xx1_a1"> 查看全部</a><br />
+						</div>
+					</div>
+					<div class="col-md-4">
+						<div class="xx1">
+							<div class="xx1_d1" style="">
+								<span class="glyphicon glyphicon-ok xx1_d1_s1" style=""></span>
+							</div>
+							<span class="xx1_sp1">网站备案</span><br />
+							<a> 如何进行备案？</a><br />
+							<a>可以跳过备案吗？</a><br />
+							<a>备案常见问题和解答</a><br />
+							<a class="xx1_a1"> 查看全部</a><br />
+						</div>
+					</div>
+					<div class="col-md-4">
+						<div class="xx1">
+							<div class="xx1_d1" style="">
+								<span class="glyphicon glyphicon-barcode xx1_d1_s1" style=""></span>
+							</div>
+							<span class="xx1_sp1">在线商城</span><br />
+							<a> 开启商城</a><br />
+							<a> 如何接入支付宝？</a><br />
+							<a> 如何管理商品？</a><br />
+							<a class="xx1_a1"> 查看全部</a><br />
+						</div>
+					</div>
+				</div>
+
+			</div>
+
+		</div>
+
+		
+		<!--跟随导航-->
+		<div class="dd" style="z-index: 10;">
+			<img src="../image/Wimg/4.png" width="160px" height="50px" style="float: left;" />
+			<table style="float: left;position: absolute;right: 50px;" class="d_tb">
+				<tr>
+					<td>
+						<a href="#" style="color: white;display: inline-block;padding-top: 20px;font-size: 16px;">首页</a>
+						<span class="s1"></span>
+					</td>
+					<td>
+						<a href="#" style="color: white;display: inline-block;padding-top: 20px;font-size: 16px;">模板</a>
+						<span class="s1"></span></td>
+					<td>
+						<a href="#" style="color: white;display: inline-block;padding-top: 20px;font-size: 16px;">
+							套餐
+						</a>
+						<span class="s1" style="width: 50px;display: block;background: lightgray;height: 2px;margin: auto;"></span></td>
+					<td>
+						<a href="#" style="color: white;display: inline-block;padding-top: 20px;font-size: 16px;">概述</a>
+						<span class="s1"></span>
+					</td>
+					<td>
+						<a href="#" style="color: white;display: inline-block;padding-top: 20px;font-size: 16px;">案例</a>
+						<span class="s1"></span></td>
+					<td>
+						<a href="#" style="color: white;display: inline-block;padding-top: 20px;font-size: 16px;">教程</a>
+						<span class="s1"></span>
+					</td>
+				</tr>
+			</table>
+
+		</div>
+
+		<div class="foot1" style="margin-top: 50px;">
+			<div class="fot_d1">
+
+				<ul style="width: 40%;">
+					<li style="color: white;font-size: 20px;font-weight: 500;">起飞页 · 优雅做网站</li>
+					<li>&nbsp;</li>
+					<li style="max-width: 380px;color: gray;font-size: 14px;font-weight: 400;">一款简洁美观的自助建站平台，一种轻松优雅的网站制作方式，解决互联网20年发展路上的古老难题——建站。</li>
+					<li>&nbsp;</li>
+					<li style="color: white;font-size: 14px;font-weight: 400;">QQ 客服： 800088546</li>
+					<li style="color: white;font-size: 14px;font-weight: 400;">客服热线： 4006-285-729 或 0512-62969169</li>
+					<li>&nbsp;</li>
+					<li style="color: white;font-size: 14px;font-weight: 400;">合作伙伴：</li>
+					<li><img src="../image/Wimg/12.png" width="92px" height="32px" /><img src="../image/Wimg/14.png" width="59px" height="33px" /></li>
+				</ul>
+				<ul style="width: 20%;">
+					<li style="color: white;font-size: 14px;font-weight: 400;">公司信息</li>
+					<li>
+						<a href="../html/company information1.html">公司介绍</a>
+					</li>
+					<li>
+						<a href="../html/company information2.html">服务条款</a>
+					</li>
+					<li>
+						<a href="../html/company information3.html">法律声明</a>
+					</li>
+					<li>
+						<a href="../html/company information4.html">可接受服务</a>
+					</li>
+					<li>
+						<a href="../html/company information5.html">免责声明</a>
+					</li>
+				</ul>
+				<ul style="width: 20%;">
+
+					<li style="color: white;font-size: 14px;font-weight: 400;">技术支持</li>
+					<li>
+						<a href="../html/technical support1.html">联系客服</a>
+					</li>
+					<li>
+						<a href="../html/technical support2.html">知识库</a>
+					</li>
+					<li>
+						<a href="../html/technical support3.html">更新日志</a>
+					</li>
+					<li>
+						<a href="../html/technical support4.html">建站商城</a>
+					</li>
+					<li>
+						<a href="../html/technical support5.html">博客</a>
+					</li>
+				</ul>
+				<ul style="width: 20%;">
+					<li style="color: white;font-size: 14px;font-weight: 400;">公司信息</li>
+					<li>
+						<a href="../html/fast entry1.html">购买套餐服务</a>
+					</li>
+					<li>
+						<a href="../html/fast entry2.html">提交域名备案流程</a>
+					</li>
+					<li>
+						<a href="../html/fast entry3.html">申请域名设定服务</a>
+					</li>
+					<li>
+						<a href="http://www.alltoall.net/">在线格式转换</a>
+					</li>
+				</ul>
+
+			</div>
+			<p style="width: 80%;margin: auto;text-align: center;color: lightgray;">拓展您的业务，展示您的风采，或者只是尝试一下新的想法。</p>
+			<p style="width: 80%;margin: auto;text-align: center;color: lightgray;">
+				<a style="color: lightgray;">起飞页自助建站平台</a>，拉近您与互联网的距离！</p>
+			<p style="height: 14px;"></p>
+			<p style="width: 95%;margin: auto;text-align: center;color: lightgray;">版权所有 2013-2016 苏州卡达网络科技有限公司 增值电信业务经营许可证苏B2-20150321 苏ICP备09008221号-3 版本: V3.6</p>
+			<div style="position: relative;left: 95%;top: -10px;">
+				<a href="#"><span class="glyphicon glyphicon-chevron-up" style="color: white;"></span></a>
+			</div>
+		</div>
+
+		<script type="text/javascript">
+			var a = 0;
+
+			$("#a1").click(function() {
+				console.log("11")
+				if(window.innerWidth < 768) {
+					if(a == 0) {
+
+						$(".t1").html("关闭")
+						$("#a2").css({
+							"display": "none"
+						});
+						$("#a3").css({
+							"display": "block"
+						});
+
+					} else {
+						$(".t1").html("教程")
+						$("#a2").css({
+							"display": "block"
+						});
+						$("#a3").css({
+							"display": "none"
+						});
+
+					}
+					a++;
+					if(a > 1) {
+						a = 0
+					}
+					return a;
+				}
+			})
+		</script>
+
+	</body>
+
+</html>

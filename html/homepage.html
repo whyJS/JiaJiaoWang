@@ -1,0 +1,643 @@
+<html>
+	<head>
+		<title>起飞网首页</title>
+		<meta charset="utf-8"/>
+		<meta name="viewport" content="width=device-width,initial-scale=1">
+		<script type="text/javascript" src="../js/jquery-1.11.1.js"></script>
+		<script type="text/javascript" src="../js/jquery-1.11.3.js"></script>
+		<link rel="stylesheet" type="text/css" href="../css/homepage.css"/>
+		<script type="text/javascript" src="../js/homepage.js"></script>
+		
+		<link rel="stylesheet" type="text/css" href="../dist/css/bootstrap.min.css">
+		<script type="text/javascript" src="../dist/js/bootstrap.min.js"></script>
+		<script type="text/javascript" src="../js/jquery.min.js"></script>
+		<script type="text/javascript" src="../js/jQuery.fontFlex.js"></script>
+		<style type="text/css">
+			@media  screen and (max-width:980px ) {
+				#bg-media
+				{
+					display: none;
+				}
+				#nav_sec
+				{
+					display: block;
+					position: relative;
+				}
+				#nav_d2{
+					position: relative;
+					/*margin-top: -300px;*/
+				}
+				#drop_d1{
+					position: absolute;
+					
+				}
+				#footer
+				{
+					display: none;
+				}
+			}
+			@media  screen and (max-width:990px ) {
+				
+				#contian3
+				{
+					display: none;
+				}
+				#contian4
+				{
+					display: block;
+				}
+			}
+			@media  screen and (max-width:950px ) {
+				
+				#navTop_u1
+				{
+					display: none;
+				}
+				
+			}
+			@media  screen and (max-width:220px ) {
+					#mianfeiCJ
+					{
+						width: 60px;
+						text-align: center;
+						margin-left: -15px;
+					}
+				
+			}
+			@media  screen and (max-width:730px ) {
+				#nav_d2_img1
+				{
+					margin-left: 135px;
+				}
+				#nav_d2_img2
+				{
+					margin-right: 135px;
+				}
+				#navTop
+				{
+					display: none;
+				}
+			}
+			@media  screen and (max-width:745px ) {
+				#contian4
+				{
+					display: none;
+				}
+				#contian5
+				{
+					display: block;
+				}
+			}
+			@media  screen and (max-width:440px ) {
+				#nav_d2
+				{
+					height: 150px;
+				}
+				#nav_d2_img1
+				{
+					margin-left: 25px;
+				}
+				#nav_d2_img2{
+					/*margin-right: 50px;*/
+				}
+				#contian2_ad{
+					width: 170px;
+				}
+					#contian2_d1{
+						font-size: 25px;
+						
+					}
+					#contian2_d2{
+						font-size: 25px;
+						
+					}
+					
+			}
+			@media  screen and (max-width:650px ) {
+				
+				#contian2_d{
+					width: 60%;
+				margin: auto;
+				}
+				#contian2_d3{
+					margin: auto;
+				
+				}
+			}
+			#loginSuccess
+			{
+				/*width: 100px;*/
+				/*height: 100px;*/
+				position: fixed;
+				top: 130px;
+				right: 15px;
+				/*border-top-left-radius: 5px;*/
+				background: rgb(218,218,218);
+				display: none;
+			}
+			#loginSuccess table tr{
+				width: 100%;
+				/*border: 1px solid red;*/
+				height: 50px;
+			}
+			
+		</style>
+		<script type="text/javascript">
+			window.onload = function()
+			{
+				var xhr = new XMLHttpRequest();
+		 		xhr.onreadystatechange = function()
+		 		{
+		 			if(xhr.readyState==4)
+		 			{
+		 				console.log("登陆成功"+xhr.responseText);
+		 				
+		 				var text = xhr.responseText;
+		 				var jsonObj = JSON.parse(text);
+//		 				console.log(jsonObj);
+//		 				console.log(jsonObj.length);
+//		 				console.log(jsonObj[jsonObj.length-1].name);
+		 				if(jsonObj[jsonObj.length-1].name)
+		 				{
+		 					$("#loginSuccess").css({"display":"block"});
+		 					$("#loginSuccess_t1").text("状态：已登录");
+							$("#loginSuccess_t2").text("用户名:"+jsonObj[jsonObj.length-1].name);
+		 				}else{
+		 					$("#loginSuccess").css({"display":"block"});
+		 					$("#loginSuccess_t1").text("状态：未登录登录");
+		 					$("#loginSuccess_t2").text("匿名用户");
+		 				}
+		 			}
+		 			
+		 		}
+		 		xhr.open("get","http://localhost/QFY/html/denglu.php?presName=getName");
+				xhr.send(null);
+				
+				
+				
+			}
+		</script>
+	</head>
+	<body>
+		<!--//登录之后显示登录信息-->
+		<div id="loginSuccess" style="text-align: center;">
+			<table>
+				<tr id="loginSuccess_t1"></tr>
+				<tr id="loginSuccess_t2"></tr>
+			</table>
+		</div>
+		<div id="bg-media">
+			<video width="100%" autoplay="autoplay" loop="loop" id="video_1">
+				
+				<source src="../image/image2/bg-1.mp4" type="video/mp4"></source>
+				
+			</video>
+			
+			<div id="bg-cover">
+				<header style="border: 0px;">
+					<nav class="navbar navbar-default" style="width: 100%;border: 0px;background: rgba(23,23,20,0.01);">
+						<div class="container-fluid" style="width: 100%;;border: 0px;height: 90px;">
+							<div  class="navbar-header" style="border: 0px;width: 100%;margin-top: 35px;">
+								<div style="border: 0px;background: rgba(23,23,20,0.01);" id="navbtn"class=" navbar-toggle" data-toggle="collapse" data-target="#homenav">
+									<span class="glyphicon glyphicon glyphicon-chevron-down navbar-right" style="color: white;cursor: pointer;"></span>
+								</div>
+							</div>
+							<div id="homenav" class="collapse navbar-collapse ">
+								<ul id="header_u1" class="nav navbar-nav">
+									<li id="header_u1_l1"><img src="../image/image2/logo.png" alt="" /></li>
+									<li><a href="homepage.html">首页</a></li>
+						<li><a href="../html/template.html">模板</a></li>
+						<li><a href="../html/package.html">套餐</a></li>
+						<li><a href="../html/summary.html">概述</a></li>
+						<li><a href="../html/case.html">案例</a></li>
+						<li><a href="../html/course.html">教程</a></li>
+									<ul id="header_u2" >
+										<li style="margin-right: 5px;">
+											<a href="denglu.html">登录</a>
+										</li>
+										<li>
+											<a href="zhuce.html">注册</a>
+										</li>
+									</ul>
+								</ul>
+							</div>
+						</div>
+					</nav>
+				</header>
+				
+				
+				<div id="right_con" class="container-fluid" style="width: 40%;">
+					<div style="width: 100%;">
+						<div class="row" class="col-md-12" style="text-align: center;">
+							<h1 style="color: white;">拥有一个网站</h1>
+						</div>
+						<div class="row" style="text-align: center;color: white;" class="col-md-12">
+							<h1>让世界了解你</h1>
+						</div>
+						<div class="row" style="margin-top:15px;color: white;font-size: 20px;text-align: center;" class="col-md-12">
+							引领「响应式自助建站」潮流,每一套模板都是艺术品
+						</div>
+						<a href="zhuce.html" style="color: white;">
+							<div id="right_con_d1" class="row" style="width: 250px;height: 65px;border: 1px solid white;color: white;font-size: 20px;text-align: center;line-height: 65px;margin: auto;margin-top:25px;">
+								免费创建账户
+							</div>
+						</a>
+					</div>
+						
+				</div>
+			</div>
+		</div>
+		
+		<div id="nav_sec">
+			<div id="nav_top">
+				<span style="margin-left: 20px;cursor: pointer;" id="nav_top_sp1">首页</span>
+				<img id="nav_top_img1" src="../image/image2/xia.png" alt="" style="float: right;margin-right: 25px;margin-top: 15px;"class="img-responsive"/>
+				<div id="drop_d1">
+					<ul>
+						<li style="margin-top: 10px;"><a href="#">首页</a></li>
+						<li><a href="">模板</a></li>
+						<li><a href="">套餐</a></li>
+						<li><a href="">概述</a></li>
+						<li><a href="">案例</a></li>
+						<li><a href="">教程</a></li>
+					</ul>
+				</div>
+			</div>
+			<div id="nav_d2">
+				<img id="nav_d2_img1" src="../image/image2/logo.png"/>
+				<img id="nav_d2_img2" src="../image/image2/qifeiye.png" alt="" class="img-responsive"/>
+			</div>
+			
+			<div class="container-fluid" id="nav_d3">
+				<div id="nav_d3_d1" style="margin-top: 15px;">
+					<div class="row" >
+						<div class="col-md-12 col-xs-8	" style="width:100%;color: white;text-align: center;" >
+							<h1>自己做网站</h1>
+						</div>
+					</div>
+					<div class="row">
+						<div style="color: white;text-align: center;width:100%;" class="col-md-12 col-xs-8	" >
+							<h1>简单又省钱</h1>
+						</div>
+					</div>
+					<div class="row">
+						<div style="width:100%;color: white;font-size: 19px;text-align: center;" class="col-md-12 col-xs-12">
+							 引领「响应式自助建站」潮流，每一套模板都是艺术品
+						</div>
+					</div>
+					<div class="row" style="margin-bottom: 35px;width: 93%;margin-left: 0px;" >
+						
+							<a href="">
+								<div id="mianfeiCJ" style="padding:20px;background: rgb(54,133,190);color: white;font-size: 18px;border-radius: 5px;text-align:center;margin-top: 25px;" class="col-xs-4 col-sm-3 col-sm-push-5 col-xs-push-5" >
+								
+									免费创建账户
+								
+								</div>
+							</a>
+						
+						
+						
+					</div>
+				</div>
+				
+				
+			</div>
+			
+		
+		</div>
+		<div id="navTop">
+				
+			<div >
+			
+				<img style="margin-left:44px;margin-top:5px;width: 150px;height: 50px;float: left;" src="../image/image2/aHR0cDovL3d3dy5xaWZlaXllLmNvbS9xZnktY29udGVudC91cGxvYWRzLzIwMTUvMDgvZjQ3ZDY1MjU3YzEyN2YzY2YxNjUzYjE1NjQ4MDE2YWQucG5n.png" alt="" />
+
+				<ul id="navTop_u1" style="float: right;">
+					<li id="navTop_u1_l1" class="ac">
+						<a href="#" class="nav-a"><span>首页</span><span class="border" style="margin-top: 15px;margin-left: -9px;"></span></a>
+						
+					</li>
+					<li id="navTop_u1_l2">
+						<a href="#" class="nav-a"><span>模板</span><span class="border" style="margin-top: 15px;margin-left: -9px;"></span></a>
+					</li>
+					<li id="navTop_u1_l3">
+						<a href="#" class="nav-a"><span>套餐</span><span class="border" style="margin-top: 15px;margin-left: -9px;"></span></a>
+					</li>
+					<li id="navTop_u1_l4">
+						<a href="#" class="nav-a"><span>概述</span><span class="border" style="margin-top: 15px;margin-left: -9px;"></span></a>
+					</li>
+					<li id="navTop_u1_l5">
+						<a href="#" class="nav-a"><span>案例</span><span class="border" style="margin-top: 15px;margin-left: -9px;"></span></a>
+					</li>
+					<li style="margin-right: 50px;" id="navTop_u1_l6">
+						<a href="#" class="nav-a"><span>教程</span><span class="border" style="margin-top: 15px;margin-left: -9px;"></span></a>
+					</li>
+				</ul>
+			</div>	
+		</div>
+		<div id="section" style="width: 100%;">
+			<div class="container-fluid" id="contian1" style="width: 100%;">
+				<div class="row" style="width: 100%;height: 300px;margin-top: 50px;" >
+					<div class="col-md-4 col-xs-12 " style="width: 100%;">
+						<img src="../image/image2/更快.png" alt="" class="img-responsive" style="margin: auto;"/>
+					</div>
+					<div  style="width: 100%;text-align: center;margin-top: 100px;">
+						<span class="col-md-3 col-xs-12 col-md-push-3";id="contian1_sp1" style="font-size: 18px;">采用响应式技术构建 </span> 
+						<span class="col-md-3 col-md-push-3" style="font-size: 18px;" id="contian1_sp2">适合在所有设备下使用</span>
+					</div>
+				</div>
+				<div class="row">
+					<img src="../image/image2/pic1.png" alt="" class="img-responsive" style="margin: auto;margin-top: -120px;"/>
+				</div>
+				<div class="row" style="margin-top: 50px;margin: auto;">
+					<div class="col-md-4 col-sm-12 col-md-push-2">
+						<h3>傻瓜式操作，无需编写代码</h3>
+						<h4 style="color: gray;">起飞页使用了最先进的网页图文编辑模式，将传统的编码工作转化为直观的拖拽操作和文字录入。在这里，您仅需花上10分钟，就可以开始自己创建网站的奇妙之旅，直到网站完成，您会发现完全不需要编写一行代码，这就是自助建站的神奇之处。</h4>
+					</div>
+					<div class="col-md-4 col-sm-12 col-md-push-3" >
+						<h3>强大的内置功能库，信手拈来</h3>
+						<h4 style="color: gray;">起飞页提供了大量的内置功能：图文、幻灯片、视频、菜单、博客、产品列表、可定制化表单、进度条、跑马灯、地图、搜索、下载、客户支持、用户管理、微信接口、在线商城。事实上，我们还在不断开发新的应用，这些完全是免费的。</h4>
+					</div>
+				</div>
+				
+			</div>
+			<div class="container-fluid" id="contian2"style="width: 100%;background: rgb(62,163,255);margin-top: 100px;padding-bottom: 50px;">
+				<div class="row" style="width: 100%;">
+					<div class="col-md-6 col-sm-6 col-sm-offset-1 col-md-offset-0" style="padding: 0px;">
+						<img src="../image/image2/pic2.png" alt="" />
+					</div>
+					<div class="col-md-6 col-sm-12 col-sm-push-2 col-md-push-0 col-xs-12 col-xs-push-3"  id="contian2_d">
+						<div class="row">
+							<div id="contian2_d1" >现在，您可以从众多出色模板中</div>
+							<div id="contian2_d2"  >挑选您最喜欢的</div>
+							<div id="contian2_d3" style="width: 100%;">
+								<a href=""  style="text-align: center;">
+									<div id="contian2_ad" style="margin-top: 50px;border: 1px solid white;border-radius: 5px;padding-top:16px;padding-bottom: 16px;padding-left: 40px;padding-right: 40px;" class="col-md-5 col-md-push-4 col-sm-5 col-sm-push-4">
+											选择模板
+									</div>
+								</a>
+							</div>
+							
+						</div>
+					</div>
+				</div>
+			</div>
+			
+			<div class="container-fluid" id="contian3" style="width:100%;">
+				<div id="contian3_d1">
+					<div id="contian3_d1_d2" style="border-top-left-radius:25px;border-bottom-left-radius:25px;float:left;width: 200px;height: 48px;text-align: center;line-height: 48px;">10年行内经验</div>
+					<div id="contian3_d1_d3" style="float:left;width: 200px;height: 48px;text-align: center;line-height: 48px;">合作伙伴</div>
+					<div id="contian3_d1_d4" style="border-top-right-radius:25px;border-bottom-right-radius:25px;float:right;width: 198px;height: 48px;text-align: center;line-height: 48px;">客户反馈</div>
+				</div>
+				<div id="contian3_d2" class="row" style="width: 80%;height: 380px;background: rgb(244,244,244);border: 1px solid rgb(239,239,239);margin: auto;margin-top:100px;">
+					<div class="" style="width: 90%; margin: auto;margin-top: 100px;text-align: center;">
+						<img src="../image/image2/pic3.png" alt="" style="width: 80px;height: 56px;"/>
+						<span style="font-size: 36px;">始于2007年，已经为超过15万用户提供建站服务。</span>
+					</div>
+					<div class="" style="width: 90%;margin: auto;text-align: center;margin-top: 60px;">
+						<span style="letter-spacing: 1px;color: rgb(128, 128, 128);font-size: 17px;">起飞页全面采用阿里云以及亚马逊云主机搭建</span>
+					</div>
+					<div class="" style="width: 90%;margin: auto;text-align: center;margin-top: 30px;">
+						<span style="letter-spacing: 1px;color: rgb(128, 128, 128);font-size: 17px;">您可以信赖的建站服务提供商</span>
+					</div>
+				</div>
+				
+				<div id="contian3_d3" class="row" style="width: 80%;margin: auto;margin-top: 100px;">
+					<div class="col-md-4" style="height: 300px;" >
+						<div id="contian3_d3_d1" style="width: 100%;height:100%;margin: auto;border: 1px solid rgb(209,209,209);text-align: center;">
+							<img src="../image/image2/ali.png" alt="" style="width:230px;margin: auto;margin-top: 50px;"/><br>
+							<span style="letter-spacing: 1px;color: rgb(128, 128, 128);font-size: 16px;">阿里云金牌合作伙伴</span><br>
+							<span style="letter-spacing: 1px;color: rgb(128, 128, 128);font-size: 16px;">aliyun</span>
+						</div>
+					</div>
+					<div class="col-md-4" style="height: 300px;text-align: center;">
+						<div  id="contian3_d3_d2" style="width: 100%;height:100%;margin: auto;border: 1px solid rgb(209,209,209);">
+							<img src="../image/image2/dx.png" alt="" style="width:230px;margin: auto;margin-top: 50px;"/><br>
+							<span style="letter-spacing: 1px;color: rgb(128, 128, 128);font-size: 16px;">中国电信指定供应商</span><br>
+							<span style="letter-spacing: 1px;color: rgb(128, 128, 128);font-size: 16px;">China telecom</span>
+						</div>
+					</div>
+					<div class="col-md-4" style="height: 300px;text-align: center;" >
+						<div id="contian3_d3_d3" style="width: 100%;height:100%;margin: auto;border: 1px solid rgb(209,209,209);">
+							<img src="../image/image2/ymx.png" alt="" style="width:230px;margin: auto;margin-top: 50px;"/><br>
+							<span style="letter-spacing: 1px;color: rgb(128, 128, 128);font-size: 16px;">亚马逊合作伙伴</span><br>
+							<span style="letter-spacing: 1px;color: rgb(128, 128, 128);font-size: 16px;">amazon</span>
+						</div>
+					</div>
+				</div>
+				
+				<div id="contian3_d4" class="row" style="width: 80%;margin: auto;margin-top: 100px;">
+					<div class="col-md-4" style="height: 380px;" >
+						<div style="background: white;width: 100%;height: 100%;margin: auto;border: 1px solid rgb(209,209,209);">
+							<div style="width: 90px;margin: auto;margin-bottom: 30px;">
+							<img src="../image/image2/ushare.png" alt="" style="margin-top: 40px;"/><br>
+							</div>
+							<span style="">我们尝试使用起飞页系统做了大概20个网站。目前为止，起飞页是我们使用过的功能最强大的自助建站系统，基本上可以满足我的客户的不同需求。有的时候，周末发给客服的问题，也能得到即时的回答，对我们这种帮助客户做网站的公司来说，后期服务是最重要的。加油，起飞页</span>
+							<div style="width: 90%;margin: auto;margin-top:15px;text-align: center;line-height:50px;border-top:1px solid rgb(91,176,255);">
+								U-Share – 台湾知名建站公司
+							</div>
+						</div>
+					</div>
+					<div class="col-md-4" style="height: 380px;">
+						<div style="background: white;width: 100%;height: 100%;margin: auto;border: 1px solid rgb(209,209,209);">
+							<div style="width: 90px;margin: auto;margin-bottom: 30px;">
+							<img src="../image/image2/beiouws.png" alt="" style="margin-top: 40px;"/><br>
+							</div>
+							<span style="">我们尝试使用起飞页系统做了大概20个网站。目前为止，起飞页是我们使用过的功能最强大的自助建站系统，基本上可以满足我的客户的不同需求。有的时候，周末发给客服的问题，也能得到即时的回答，对我们这种帮助客户做网站的公司来说，后期服务是最重要的。加油，起飞页</span>
+							<div style="width: 90%;margin: auto;margin-top:15px;text-align: center;line-height:50px;border-top:1px solid rgb(91,176,255);">
+								北欧维森商旅
+							</div>
+						</div>
+					</div>
+					<div class="col-md-4" style="height: 380px;" >
+						<div style="background: white;width: 100%;height: 100%;margin: auto;border: 1px solid rgb(209,209,209);">
+							<div style="width: 90px;margin: auto;margin-bottom: 30px;">
+							<img src="../image/image2/kingdee.png" alt="" style="margin-top: 40px;"/><br>
+							</div>
+							<span style="">我们尝试使用起飞页系统做了大概20个网站。目前为止，起飞页是我们使用过的功能最强大的自助建站系统，基本上可以满足我的客户的不同需求。有的时候，周末发给客服的问题，也能得到即时的回答，对我们这种帮助客户做网站的公司来说，后期服务是最重要的。加油，起飞页</span>
+							<div style="width: 90%;margin: auto;margin-top:15px;text-align: center;line-height:50px;border-top:1px solid rgb(91,176,255);">
+								苏州金蝶软件
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			
+			<div class="container-fluid" id="contian4">
+				<div id="contian4_d1" class="row" style="width:75%;background: rgba(242,242,242,0);text-align: center;">
+					<img src="../image/image2/shifang.png" alt="" style="margin-top: 50px;"/><br>
+						<br>
+						<br>
+						<br>
+					<span style="font-size: 16px;">起飞页，全球最领先的响应式建站平台</span><br>
+						<br>
+					<span style="font-size: 16px;">您专注于创作和业务，剩下的交给我们…</span>
+				</div>
+			</div>
+			
+			<div class="container-fluid" id="contian5">
+				<div id="contian4_d1" class="row" style="width:100%;height:300px;background: rgba(242,242,242,0);text-align: center;">
+					<img src="../image/image2/shifang.png" alt="" style="margin-top: 50px;"/><br>
+						<br>
+						<br>
+						<br>
+					<span style="font-size: 16px;">起飞页，全球最领先的响应式建站平台</span><br>
+						<br>
+					<span style="font-size: 16px;">您专注于创作和业务，剩下的交给我们…</span>
+				</div>
+			</div>
+			
+			<div class="container-fluid" id="contian6">
+				<div class="row" style="width: 100%;text-align: center;margin-top:120px;margin: auto;">
+				
+						<img src="../image/image2/womenGZ.png" alt="" class="img-responsive" style="width: 70%;margin: auto;margin-top: 100px;"/>
+						
+					
+					<br>
+						<br>
+							<br>
+					<span style="font-size: 16px;">起飞页不仅是一个方便快捷的构建网站的自助建站平台，更重要的是，我们为中国用户提供了更多贴心的服务：网站备案、自动备份、快速恢复以及网站代建服务。我们使用了国内和香港最好的网络和云服务器，确保您的网站能够快速完美的呈现在访客面前。</span>
+					<br>
+					<img src="../image/image2/contain6P1.jpg" class="img-responsive" style="width: 80%;margin: auto;margin-top: 70px;"/>
+				</div>
+			</div>
+			
+			<div class="container-fluid" id="contian7">
+				<div class="row" style="width: 100%;text-align: center;margin-top: 100px;margin-bottom: 100px;">
+					
+					<span style="padding-top: 100px;font-size: 72px;">10 / 5</span>
+					<br>
+						<br>
+					<span style="font-size: 16px;">工作日9点至19点，节假日定时响应</span>
+					<br>
+						<br>
+					<span style="font-size: 26px;">客户服务热线：4006 285 729</span>
+					<br>
+						<br>
+							<br>
+					<span style="font-size: 16px;">为每个用户提供优质的客户服务</span>
+					<br>
+					<span style="font-size: 16px;">让每个人都能自己做出赏心悦目的网站</span>
+				</div>
+			</div>
+			<div class="container-fluid" id="contian8">
+				<div class="row" style="width: 40%;margin-left: 3%;margin-top: 5px;margin-bottom: 5px;">
+					<span >友情链接：<a href="" style="margin-left: 1%;">模板之家</a><a href="" style="margin-left: 2%;">织梦猫</a></span>
+				</div>
+			</div>
+		</div>
+		
+		<div style="width: 100%;" id="footer">
+			<div class="container-fluid" id="footer_d1" style="padding-bottom:50px;width: 95%;margin: auto;background: rgb(45,44,44);">
+				
+					<ul style="width: 100%;margin-top: 35px;" id="footer_d1_u1">
+						<li style="width: 32%;" >
+							<ul style="width: 100%;" id="footer_d1_u1_u1">
+								<li style="font-size: 20px;font-weight: 700;color: white;margin-top: 15px;">
+									起飞页 · 优雅做网站
+								</li>
+								<li style="color: gray;margin-top: 30px;">
+									一款简洁美观的自助建站平台，一种轻松优雅的网站制作方式，解决互联网20年发展路上的古老难题——建站
+								</li>
+								<li style="font-size: 14px;color: white;margin-top: 35px;">
+									QQ 客服： 800088546
+								</li>
+								<li style="font-size: 14px;color: white;">
+									客服热线： 4006-285-729 或 0512-62969169
+								</li>
+								<li style="font-size: 14px;color: white;margin-top: 30px;">
+									合作伙伴：<br>
+									<img src="../image/image2/payp.png" alt="" style="width: 92px;height: 32px;"/>
+									<img src="../image/image2/faliyun.png" alt="" style="width: 59px;height: 33px;"/>
+								</li>
+								
+							</ul>
+						</li>
+						<li style="width: 8%;margin-left: 8%;" >
+							<ul style="width: 100%;margin-top: 0px;" id="footer_d1_u1_u2">
+								<li style="font-size: 16px;font-weight: bold;color: white;">
+									公司信息
+								</li>
+								<li style="font-size: 14px;color: gray;">
+									<a href="">公司介绍</a>
+								</li>
+								<li style="font-size: 14px;color: gray;">
+									<a href="">服务条款</a>
+								</li>
+								<li style="font-size: 14px;color: gray;">
+									<a href="">法律声明</a>
+								</li>
+								<li style="font-size: 14px;color: gray;">
+									<a href="">可接受服务</a>
+								</li>
+								<li style="font-size: 14px;color: gray;">
+									<a href="">免责声明</a>
+								</li>
+							</ul>
+						</li>
+						<li style="width: 7%;margin-left: 10%;">
+							<ul style="width: 100%;margin-top: 0px;" id="footer_d1_u1_u3">
+								<li style="font-size: 16px;font-weight: bold;color: white;">
+									技术支持
+								</li>
+								<li style="font-size: 14px;color: gray;">
+									<a href="">联系客服</a>
+								</li>
+								<li style="font-size: 14px;color: gray;">
+									<a href="">知识库</a>
+								</li>
+								<li style="font-size: 14px;color: gray;">
+									<a href="">更新日志</a>
+								</li>
+								<li style="font-size: 14px;color: gray;">
+									<a href="">建站网城</a>
+								</li>
+								<li style="font-size: 14px;color: gray;">
+									<a href="">博客</a>
+								</li>
+							</ul>
+						</li>
+						<li style="width: 12%;margin-left: 10%;">
+							<ul style="width: 100%;margin-top: 0px;"id="footer_d1_u1_u4">
+								<li style="font-size: 16px;font-weight: bold;color: white;">
+									快速入口
+								</li>
+								<li style="font-size: 14px;color: gray;">
+									<a href="">购买套餐和服务</a>
+								</li>
+								<li style="font-size: 14px;color: gray;">
+									<a href="">提交域名备案流程</a>
+								</li>
+								<li style="font-size: 14px;color: gray;">
+									<a href="">申请域名设定服务</a>
+								</li>
+								<li style="font-size: 14px;color: gray;">
+									<a href="">在线格式转换</a>
+								</li>
+							</ul>
+						</li>
+					</ul>
+				
+			</div>
+		</div>
+		<div id="ffooter">
+			<div class="container-fluid" style="color: #cecece;text-align: center;">
+				<br>
+					<br>
+				<span style="font-size: 14px;">拓展您的业务，展示您的风采，或者只是尝试一下新的想法。</span>
+				<br>
+				<span style="font-size: 14px;">起飞页自助建站平台，拉近您与互联网的距离！</span>
+				<br>
+					<br>
+				<span style="font-size: 12px;">版权所有 2013-2016 苏州卡达网络科技有限公司   增值电信业务经营许可证苏B2-20150321 苏ICP备09008221号-3 版本: V3.6</span>
+			</div>
+		</div>
+		
+		<!--右下角锚点-->
+		<a href="#bg-media">
+			<div id="zhiDing" class="glyphicon glyphicon-chevron-up" style="color: white;position: fixed;top:650px;right: 20px;">
+			
+			</div>
+		</a>
+		
+	</body>
+</html>

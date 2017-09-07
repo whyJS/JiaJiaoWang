@@ -1,0 +1,797 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		
+		<meta name="viewport" content="width=device-width">
+		<title>自助建站-起飞页|所有套餐</title>
+		<script type="text/javascript" src="../js/jquery-2.1.0.js"></script>
+		<link rel="stylesheet" href="../dist/css/bootstrap.min.css" />
+		<script type="text/javascript" src="../dist/js/bootstrap.min.js"></script>
+		<link rel="stylesheet" type="text/css" href="../css/taocan.css" />
+		
+	<script type="text/javascript">
+	function ajax_1() {
+				$.ajax({
+					url: "http://localhost/PHP/Qfy1.php",
+					type: "get",
+					dataType: "jsonp",
+					jsonp: "jsoncallback",
+					data: {
+						"name": "起飞版",
+						"pwd": "365.00¥",
+						"img": "../image/Wimg/a.png",
+						"id": "12"
+					},
+					success: function(data) {
+						console.log(data.success);
+						if(data.success == 0) {
+
+							window.location.href = "gouwuche.html";
+						}
+
+					},
+					error: function() {
+
+					}
+
+				})
+
+			}
+
+			function ajax_2() {
+				$.ajax({
+					url: "http://localhost/PHP/Qfy1.php",
+					type: "get",
+					dataType: "jsonp",
+					jsonp: "jsoncallback",
+					data: {
+						"name": "翱翔版",
+						"pwd": "600.00¥",
+						"img": "../image/Wimg/b.png",
+						"id": "12"
+					},
+					success: function(data) {
+						console.log(data.success);
+						if(data.success == 0) {
+
+							window.location.href = "gouwuche.html";
+						}
+
+					},
+					error: function() {
+
+					}
+
+				})
+
+			}
+
+			function ajax_3() {
+				$.ajax({
+					url: "http://localhost/PHP/Qfy1.php",
+					type: "get",
+					dataType: "jsonp",
+					jsonp: "jsoncallback",
+					data: {
+						"name": "太空版",
+						"pwd": "900.00¥",
+						"img": "../image/Wimg/c.png",
+						"id": "12"
+					},
+					success: function(data) {
+						console.log(data.success);
+						if(data.success == 0) {
+
+							window.location.href = "gouwuche.html";
+						}
+
+					},
+					error: function() {
+
+					}
+
+				})
+
+			}
+	
+	
+	
+	
+	
+	
+		window.onload=function(){
+			console.log("1")
+			$.ajax({
+		 	url:"http://localhost/PHP/Qfy.php",
+		 	type:"post",
+		 	data:{"name":"1223","pwd":"789"},
+		 	success:function(data){
+					
+					var s=data.split('@');
+					console.log(s[0]);
+					console.log("123")
+					$("#a0").html(s[0])
+					$("#a1").html(s[1])
+					$("#a2").html(s[2])
+					$("#a3").html(s[3])
+					$("#a4").html(s[4])
+					$("#a5").html(s[5])
+					$("#a6").html(s[6])
+					$("#a7").html(s[7])
+				
+					
+					var a=s[7];
+					console.log(a);
+//					var $aa=$('s[7]');
+//					console.log($aa);
+					var $aa=$(a);
+					$("#ckl").append($aa);
+                    for(var i=0;i<8;i++){
+                    	if(s[i]==0.1){
+                    		
+                    		$("#a0"+ i).css({"display":"none"});
+                    	}else{
+                    		$("#a0"+ i).css({"display":"block"});
+                    	}
+                    }
+					console.log(s);
+					
+				},
+			error:function(){
+				
+			}
+		 })
+		}
+	</script>
+	</head>
+
+	<body style="overflow-x: hidden;">
+		<!--导航-->
+		<header style="background:url(../image/Wimg/2.jpg) ;border: 0px solid black;min-height: 500px;background-size: cover;padding-bottom: 200px;">
+			<nav class="navbar navbar-default nav_a1" role="navigation" style=" background: rgba(255,255,255,0);border: 0px solid white;">
+
+				<div class="container-fluid" style="border: 0px solid white;">
+					<div class="navbar-header" style="border: 0px solid black;">
+						<button data-toggle="collapse" data-target="#example-navbar-collapse" id="aa" type="button" class="navbar-toggle" style="background: rgba(255,255,255,0);border: 0px solid black;">
+			<!--<span class="sr-only">切换导航</span>
+			<span class="icon-bar"></span>
+			<span class="icon-bar"></span>
+			<span class="icon-bar"></span>-->
+			 <span class="glyphicon glyphicon-chevron-down" style="color: white;"></span>
+		</button>
+						<a class="navbar-brand" href="#" id="cc"><img src="../image/Wimg/1.png" /></a>
+					</div>
+
+					<div class="collapse navbar-collapse" id="example-navbar-collapse" style="border: 0px solid black;z-index: 2;">
+						<ul class="nav navbar-nav u1">
+							<li>
+								<a href="../html/homepage.html" style="color: white;display: inline-block;padding-top: 30px;font-size: 16px;">首页</a>
+							</li>
+							<li>
+								<a href="../html/template.html" style="color: white;display: inline-block;padding-top: 30px;font-size: 16px;">模板</a>
+							</li>
+							<li class="dropdown">
+								<a href="../html/package.html" class="dropdown-toggle" data-toggle="dropdown" style="color: white;display: inline-block;padding-top: 30px;font-size: 16px;">
+									套餐
+								</a>
+
+							</li>
+							<li>
+								<a href="../html/summary.html" style="color: white;display: inline-block;padding-top: 30px;font-size: 16px;">概述</a>
+							</li>
+							<li>
+								<a href="../html/case.html" style="color: white;display: inline-block;padding-top: 30px;font-size: 16px;">案例</a>
+							</li>
+							<li>
+								<a href="../html/course.html" style="color: white;display: inline-block;padding-top: 30px;font-size: 16px;">教程</a>
+							</li>
+						</ul>
+						<div class="ul_d1">
+
+							<a href="denglu.html">登录</a>
+
+							<a href="zhuce.html">注册</a>
+
+						</div>
+					</div>
+
+				</div>
+				<div class="qw container" style="background: #0088c2;margin-top:0px;padding-top: 30px;padding-bottom: 30px;padding-left: 10px;padding-right: 10px;">
+					<div class="row">
+						<div class=" col-sm-6 col-xs-6 "><img src="../image/Wimg/1.png" /></div>
+						<div class=" col-sm-6 col-xs-6 text-right"><img src="../image/Wimg/3.png" style="width: 89px;height: 30px;" /></div>
+					</div>
+				</div>
+			</nav>
+
+			<div class="container">
+				<div class="container row col-md-12" style="color: white;font-size: 36px;text-align: center;">免费使用所有模板，只需支付托管费用</div>
+
+			</div>
+
+		</header>
+		<div class="dd" style="z-index: 10;">
+			<img src="../image/Wimg/4.png" width="160px" height="50px" style="float: left;" />
+			<table style="float: left;position: absolute;right: 50px;" class="d_tb">
+				<tr>
+					<td>
+						<a href="#" style="color: white;display: inline-block;padding-top: 20px;font-size: 16px;">首页</a>
+						<span class="s1"></span>
+					</td>
+					<td>
+						<a href="#" style="color: white;display: inline-block;padding-top: 20px;font-size: 16px;">模板</a>
+						<span class="s1"></span></td>
+					<td>
+						<a href="#" style="color: white;display: inline-block;padding-top: 20px;font-size: 16px;">
+							套餐
+						</a>
+						<span class="s1" style="width: 50px;display: block;background: lightgray;height: 2px;margin: auto;"></span></td>
+					<td>
+						<a href="#" style="color: white;display: inline-block;padding-top: 20px;font-size: 16px;">概述</a>
+						<span class="s1"></span>
+					</td>
+					<td>
+						<a href="#" style="color: white;display: inline-block;padding-top: 20px;font-size: 16px;">案例</a>
+						<span class="s1"></span></td>
+					<td>
+						<a href="#" style="color: white;display: inline-block;padding-top: 20px;font-size: 16px;">教程</a>
+						<span class="s1"></span>
+					</td>
+				</tr>
+			</table>
+
+		</div>
+		<div class="body_div" style="background: #f2f2f2;padding-bottom: 50px;">
+			<div class="container" >
+				<div class="row" id="ckl">
+					<div class="col-md-3 col-sm-12 body_div_d1" id="a00" style="padding-bottom: 65px;margin-top: 50px;">
+						<div class="body_div_d1_dv1">免费版</div>
+						<div class="body_div_d1_dv2">
+							<span class="body_div_d1_dv2_s1">试用于简单网站或评估目的</span>
+							<br />
+							<span class="body_div_d1_dv2_s2" id="a0">0
+								
+							</span>
+							<span class="body_div_d1_dv2_s3">元/年</span>
+							<a class="body_div_d1_dv2_a" >
+								创建网站
+							</a>
+						</div>
+						<div class="body_div_d1_dv3">
+							<div class="body_div_d1_dv3_d1">
+								<div class="body_div_d1_dv3_d1_d1">套餐特色：</div>
+								<div class="body_div_d1_dv3_d1_d2">域名：需另外购买</div>
+								<div class="body_div_d1_dv3_d1_d3">支持设备：
+									<img src="../image/Wimg/5.png" /><img src="../image/Wimg/6.png" /><img src="../image/Wimg/7.png" />
+								</div>
+								<div class="body_div_d1_dv3_d1_d4">空间：200M</div>
+								<div class="body_div_d1_dv3_d1_d5">流量：1G/每月
+									<a style="font-size: 12px;">(了解详情)</a>
+								</div>
+								<div class="body_div_d1_dv3_d1_d6">商城：不支持</div>
+								<div class="body_div_d1_dv3_d1_d7">自动备份：无</div>
+								<div class="body_div_d1_dv3_d1_d8">技术支持：邮件</div>
+								<div class="body_div_d1_dv3_d1_d9">* 选择 <span style="font-weight: 500;">海外机房</span> 可绑定域名（仅限于在起飞页购买）并发布网站</div>
+								<div class="body_div_d1_dv3_d1_d10">* 网站有起飞页底标：<img src="../image/Wimg/8.png" /></div>
+							</div>
+						</div>
+					</div>
+					<div class="col-md-3 col-sm-12 body_div_d1" id="a01" style="padding-bottom: 65px;margin-top: 50px;">
+						<div class="body_div_d1_dv1" style="background: #3686be;">起飞版</div>
+						<div class="body_div_d1_dv2">
+							<span class="body_div_d1_dv2_s1">试用于简单网站或评估目的</span>
+							<br />
+							<span class="body_div_d1_dv2_s2" id="a1">0
+								
+							</span>
+							<span class="body_div_d1_dv2_s3">元/年</span>
+							<a class="body_div_d2_dv2_a" onclick="ajax_1()">
+								查看套餐
+							</a>
+						</div>
+						<div class="body_div_d1_dv3">
+							<div class="body_div_d1_dv3_d1">
+								<div class="body_div_d1_dv3_d1_d1">套餐特色：</div>
+								<div class="body_div_d1_dv3_d1_d2">域名：需另外购买</div>
+								<div class="body_div_d1_dv3_d1_d3">支持设备：
+									<img src="../image/Wimg/5.png" /><img src="../image/Wimg/6.png" /><img src="../image/Wimg/7.png" />
+								</div>
+								<div class="body_div_d1_dv3_d1_d4">空间：200M</div>
+								<div class="body_div_d1_dv3_d1_d5">流量：1G/每月
+									<a style="font-size: 12px;">(了解详情)</a>
+								</div>
+								<div class="body_div_d1_dv3_d1_d6">商城：不支持</div>
+								<div class="body_div_d1_dv3_d1_d7">自动备份：无</div>
+								<div class="body_div_d1_dv3_d1_d8">技术支持：邮件</div>
+								<div class="body_div_d1_dv3_d1_d9">* 选择 <span style="font-weight: 500;">海外机房</span> 可绑定域名（仅限于在起飞页购买）并发布网站</div>
+								<div class="body_div_d1_dv3_d1_d10">* 网站有起飞页底标：<img src="../image/Wimg/8.png" /></div>
+							</div>
+						</div>
+					</div>
+					<div class="col-md-3 col-sm-12 body_div_d1" id="a02" style="padding-bottom: 65px;margin-top: 50px;">
+						<div class="body_div_d1_dv1" style="background: green;">翱翔版</div>
+						<div class="body_div_d1_dv2">
+							<span class="body_div_d1_dv2_s1">试用于简单网站或评估目的</span>
+							<br />
+							<span class="body_div_d1_dv2_s2" id="a2">0
+								
+							</span>
+							<span class="body_div_d1_dv2_s3">元/年</span>
+							<a class="body_div_d3_dv2_a" onclick="ajax_2()">
+								查看套餐
+							</a>
+						</div>
+						<div class="body_div_d1_dv3">
+							<div class="body_div_d1_dv3_d1">
+								<div class="body_div_d1_dv3_d1_d1">套餐特色：</div>
+								<div class="body_div_d1_dv3_d1_d2">域名：需另外购买</div>
+								<div class="body_div_d1_dv3_d1_d3">支持设备：
+									<img src="../image/Wimg/5.png" /><img src="../image/Wimg/6.png" /><img src="../image/Wimg/7.png" />
+								</div>
+								<div class="body_div_d1_dv3_d1_d4">空间：200M</div>
+								<div class="body_div_d1_dv3_d1_d5">流量：1G/每月
+									<a style="font-size: 12px;">(了解详情)</a>
+								</div>
+								<div class="body_div_d1_dv3_d1_d6">商城：不支持</div>
+								<div class="body_div_d1_dv3_d1_d7">自动备份：无</div>
+								<div class="body_div_d1_dv3_d1_d8">技术支持：邮件</div>
+								<div class="body_div_d1_dv3_d1_d9">* 选择 <span style="font-weight: 500;">海外机房</span> 可绑定域名（仅限于在起飞页购买）并发布网站</div>
+								<div class="body_div_d1_dv3_d1_d10">* 网站有起飞页底标：<img src="../image/Wimg/8.png" /></div>
+							</div>
+						</div>
+					</div>
+					<div class="col-md-3 col-sm-12 body_div_d1" id="a03" style="padding-bottom: 65px;margin-top: 50px;">
+						<div class="body_div_d1_dv1">太空板</div>
+						<div class="body_div_d1_dv2">
+							<span class="body_div_d1_dv2_s1">试用于简单网站或评估目的</span>
+							<br />
+							<span class="body_div_d1_dv2_s2" id="a3">0
+								
+							</span>
+							<span class="body_div_d1_dv2_s3">元/年</span>
+							<a class="body_div_d4_dv2_a" onclick="ajax_3()">
+								查看套餐
+							</a>
+						</div>
+						<div class="body_div_d1_dv3">
+							<div class="body_div_d1_dv3_d1">
+								<div class="body_div_d1_dv3_d1_d1">套餐特色：</div>
+								<div class="body_div_d1_dv3_d1_d2">域名：需另外购买</div>
+								<div class="body_div_d1_dv3_d1_d3">支持设备：
+									<img src="../image/Wimg/5.png" /><img src="../image/Wimg/6.png" /><img src="../image/Wimg/7.png" />
+								</div>
+								<div class="body_div_d1_dv3_d1_d4">空间：200M</div>
+								<div class="body_div_d1_dv3_d1_d5">流量：1G/每月
+									<a style="font-size: 12px;">(了解详情)</a>
+								</div>
+								<div class="body_div_d1_dv3_d1_d6">商城：不支持</div>
+								<div class="body_div_d1_dv3_d1_d7">自动备份：无</div>
+								<div class="body_div_d1_dv3_d1_d8">技术支持：邮件</div>
+								<div class="body_div_d1_dv3_d1_d9">* 选择 <span style="font-weight: 500;">海外机房</span> 可绑定域名（仅限于在起飞页购买）并发布网站</div>
+								<div class="body_div_d1_dv3_d1_d10">* 网站有起飞页底标：<img src="../image/Wimg/8.png" /></div>
+							</div>
+						</div>
+					</div>
+					
+				<!--</div>
+			</div>
+		</div>
+		
+
+		<div class="body_div" style="background: #f2f2f2;">
+			<div class="container" style="position: relative;top: -150px;">
+				<div class="row">-->
+					<div class="col-md-3 col-sm-12 body_div_d1" id="a04" style="padding-bottom: 65px;margin-top: 50px;">
+						<div class="body_div_d1_dv1">免费版</div>
+						<div class="body_div_d1_dv2">
+							<span class="body_div_d1_dv2_s1">试用于简单网站或评估目的</span>
+							<br />
+							<span class="body_div_d1_dv2_s2" id="a4">0
+								
+							</span>
+							<span class="body_div_d1_dv2_s3">元/年</span>
+							<a class="body_div_d1_dv2_a">
+								创建网站
+							</a>
+						</div>
+						<div class="body_div_d1_dv3">
+							<div class="body_div_d1_dv3_d1">
+								<div class="body_div_d1_dv3_d1_d1">套餐特色：</div>
+								<div class="body_div_d1_dv3_d1_d2">域名：需另外购买</div>
+								<div class="body_div_d1_dv3_d1_d3">支持设备：
+									<img src="../image/Wimg/5.png" /><img src="../image/Wimg/6.png" /><img src="../image/Wimg/7.png" />
+								</div>
+								<div class="body_div_d1_dv3_d1_d4">空间：200M</div>
+								<div class="body_div_d1_dv3_d1_d5">流量：1G/每月
+									<a style="font-size: 12px;">(了解详情)</a>
+								</div>
+								<div class="body_div_d1_dv3_d1_d6">商城：不支持</div>
+								<div class="body_div_d1_dv3_d1_d7">自动备份：无</div>
+								<div class="body_div_d1_dv3_d1_d8">技术支持：邮件</div>
+								<div class="body_div_d1_dv3_d1_d9">* 选择 <span style="font-weight: 500;">海外机房</span> 可绑定域名（仅限于在起飞页购买）并发布网站</div>
+								<div class="body_div_d1_dv3_d1_d10">* 网站有起飞页底标：<img src="../image/Wimg/8.png" /></div>
+							</div>
+						</div>
+					</div>
+					<div class="col-md-3 col-sm-12 body_div_d1" id="a05" style="padding-bottom: 65px;margin-top: 50px;">
+						<div class="body_div_d1_dv1" style="background: #3686be;">起飞版</div>
+						<div class="body_div_d1_dv2">
+							<span class="body_div_d1_dv2_s1">试用于简单网站或评估目的</span>
+							<br />
+							<span class="body_div_d1_dv2_s2" id="a5">0
+								
+							</span>
+							<span class="body_div_d1_dv2_s3">元/年</span>
+							<a class="body_div_d2_dv2_a" onclick="ajax_1()">
+								查看套餐
+							</a>
+						</div>
+						<div class="body_div_d1_dv3">
+							<div class="body_div_d1_dv3_d1">
+								<div class="body_div_d1_dv3_d1_d1">套餐特色：</div>
+								<div class="body_div_d1_dv3_d1_d2">域名：需另外购买</div>
+								<div class="body_div_d1_dv3_d1_d3">支持设备：
+									<img src="../image/Wimg/5.png" /><img src="../image/Wimg/6.png" /><img src="../image/Wimg/7.png" />
+								</div>
+								<div class="body_div_d1_dv3_d1_d4">空间：200M</div>
+								<div class="body_div_d1_dv3_d1_d5">流量：1G/每月
+									<a style="font-size: 12px;">(了解详情)</a>
+								</div>
+								<div class="body_div_d1_dv3_d1_d6">商城：不支持</div>
+								<div class="body_div_d1_dv3_d1_d7">自动备份：无</div>
+								<div class="body_div_d1_dv3_d1_d8">技术支持：邮件</div>
+								<div class="body_div_d1_dv3_d1_d9">* 选择 <span style="font-weight: 500;">海外机房</span> 可绑定域名（仅限于在起飞页购买）并发布网站</div>
+								<div class="body_div_d1_dv3_d1_d10">* 网站有起飞页底标：<img src="../image/Wimg/8.png" /></div>
+							</div>
+						</div>
+					</div>
+					<div class="col-md-3 col-sm-12 body_div_d1" id="a06" style="padding-bottom: 65px;margin-top: 50px;">
+						<div class="body_div_d1_dv1" style="background: green;">翱翔版</div>
+						<div class="body_div_d1_dv2">
+							<span class="body_div_d1_dv2_s1">试用于简单网站或评估目的</span>
+							<br />
+							<span class="body_div_d1_dv2_s2" id="a6">0
+								
+							</span>
+							<span class="body_div_d1_dv2_s3">元/年</span>
+							<a class="body_div_d3_dv2_a" onclick="ajax_2()">
+								查看套餐
+							</a>
+						</div>
+						<div class="body_div_d1_dv3">
+							<div class="body_div_d1_dv3_d1">
+								<div class="body_div_d1_dv3_d1_d1">套餐特色：</div>
+								<div class="body_div_d1_dv3_d1_d2">域名：需另外购买</div>
+								<div class="body_div_d1_dv3_d1_d3">支持设备：
+									<img src="../image/Wimg/5.png" /><img src="../image/Wimg/6.png" /><img src="../image/Wimg/7.png" />
+								</div>
+								<div class="body_div_d1_dv3_d1_d4">空间：200M</div>
+								<div class="body_div_d1_dv3_d1_d5">流量：1G/每月
+									<a style="font-size: 12px;">(了解详情)</a>
+								</div>
+								<div class="body_div_d1_dv3_d1_d6">商城：不支持</div>
+								<div class="body_div_d1_dv3_d1_d7">自动备份：无</div>
+								<div class="body_div_d1_dv3_d1_d8">技术支持：邮件</div>
+								<div class="body_div_d1_dv3_d1_d9">* 选择 <span style="font-weight: 500;">海外机房</span> 可绑定域名（仅限于在起飞页购买）并发布网站</div>
+								<div class="body_div_d1_dv3_d1_d10">* 网站有起飞页底标：<img src="../image/Wimg/8.png" /></div>
+							</div>
+						</div>
+					</div>
+					<div class="col-md-3 col-sm-12 body_div_d1" id="a07" style="padding-bottom: 65px;margin-top: 50px;">
+						<div class="body_div_d1_dv1">太空板</div>
+						<div class="body_div_d1_dv2">
+							<span class="body_div_d1_dv2_s1">试用于简单网站或评估目的</span>
+							<br />
+							<span class="body_div_d1_dv2_s2" id="a7">0
+								
+							</span>
+							<span class="body_div_d1_dv2_s3">元/年</span>
+							<a class="body_div_d4_dv2_a" onclick="ajax_3()">
+								查看套餐
+							</a>
+						</div>
+						<div class="body_div_d1_dv3">
+							<div class="body_div_d1_dv3_d1">
+								<div class="body_div_d1_dv3_d1_d1">套餐特色：</div>
+								<div class="body_div_d1_dv3_d1_d2">域名：需另外购买</div>
+								<div class="body_div_d1_dv3_d1_d3">支持设备：
+									<img src="../image/Wimg/5.png" /><img src="../image/Wimg/6.png" /><img src="../image/Wimg/7.png" />
+								</div>
+								<div class="body_div_d1_dv3_d1_d4">空间：200M</div>
+								<div class="body_div_d1_dv3_d1_d5">流量：1G/每月
+									<a style="font-size: 12px;">(了解详情)</a>
+								</div>
+								<div class="body_div_d1_dv3_d1_d6">商城：不支持</div>
+								<div class="body_div_d1_dv3_d1_d7">自动备份：无</div>
+								<div class="body_div_d1_dv3_d1_d8">技术支持：邮件</div>
+								<div class="body_div_d1_dv3_d1_d9">* 选择 <span style="font-weight: 500;">海外机房</span> 可绑定域名（仅限于在起飞页购买）并发布网站</div>
+								<div class="body_div_d1_dv3_d1_d10">* 网站有起飞页底标：<img src="../image/Wimg/8.png" /></div>
+							</div>
+						</div>
+					</div>
+
+				</div>
+			</div>
+
+		</div>
+		
+						<div class="dd" style="z-index: 10;">
+			<img src="../image/Wimg/4.png" width="160px" height="50px" style="float: left;" />
+			<table style="float: left;position: absolute;right: 50px;" class="d_tb">
+				<tr>
+					<td>
+						<a href="#" style="color: white;display: inline-block;padding-top: 20px;font-size: 16px;">首页</a>
+						<span class="s1"></span>
+					</td>
+					<td>
+						<a href="#" style="color: white;display: inline-block;padding-top: 20px;font-size: 16px;">模板</a>
+						<span class="s1"></span></td>
+					<td>
+						<a href="#" style="color: white;display: inline-block;padding-top: 20px;font-size: 16px;">
+							套餐
+						</a>
+						<span class="s1" style="width: 50px;display: block;background: lightgray;height: 2px;margin: auto;"></span></td>
+					<td>
+						<a href="#" style="color: white;display: inline-block;padding-top: 20px;font-size: 16px;">概述</a>
+						<span class="s1"></span>
+					</td>
+					<td>
+						<a href="#" style="color: white;display: inline-block;padding-top: 20px;font-size: 16px;">案例</a>
+						<span class="s1"></span></td>
+					<td>
+						<a href="#" style="color: white;display: inline-block;padding-top: 20px;font-size: 16px;">教程</a>
+						<span class="s1"></span>
+					</td>
+				</tr>
+			</table>
+
+		</div>
+
+		<div class="foot1" style="margin-top: 50px;">
+			<div class="fot_d1">
+
+				<ul style="width: 40%;">
+					<li style="color: white;font-size: 20px;font-weight: 500;">起飞页 · 优雅做网站</li>
+					<li>&nbsp;</li>
+					<li style="max-width: 380px;color: gray;font-size: 14px;font-weight: 400;">一款简洁美观的自助建站平台，一种轻松优雅的网站制作方式，解决互联网20年发展路上的古老难题——建站。</li>
+					<li>&nbsp;</li>
+					<li style="color: white;font-size: 14px;font-weight: 400;">QQ 客服： 800088546</li>
+					<li style="color: white;font-size: 14px;font-weight: 400;">客服热线： 4006-285-729 或 0512-62969169</li>
+					<li>&nbsp;</li>
+					<li style="color: white;font-size: 14px;font-weight: 400;">合作伙伴：</li>
+					<li><img src="../image/Wimg/12.png" width="92px" height="32px" /><img src="../image/Wimg/14.png" width="59px" height="33px" /></li>
+				</ul>
+				<ul style="width: 20%;">
+					<li style="color: white;font-size: 14px;font-weight: 400;">公司信息</li>
+					<li>
+						<a href="../html/company information1.html">公司介绍</a>
+					</li>
+					<li>
+						<a href="../html/company information2.html">服务条款</a>
+					</li>
+					<li>
+						<a href="../html/company information3.html">法律声明</a>
+					</li>
+					<li>
+						<a href="../html/company information4.html">可接受服务</a>
+					</li>
+					<li>
+						<a href="../html/company information5.html">免责声明</a>
+					</li>
+				</ul>
+				<ul style="width: 20%;">
+
+					<li style="color: white;font-size: 14px;font-weight: 400;">技术支持</li>
+					<li>
+						<a href="../html/technical support1.html">联系客服</a>
+					</li>
+					<li>
+						<a href="../html/technical support2.html">知识库</a>
+					</li>
+					<li>
+						<a href="../html/technical support3.html">更新日志</a>
+					</li>
+					<li>
+						<a href="../html/technical support4.html">建站商城</a>
+					</li>
+					<li>
+						<a href="../html/technical support5.html">博客</a>
+					</li>
+				</ul>
+				<ul style="width: 20%;">
+					<li style="color: white;font-size: 14px;font-weight: 400;">公司信息</li>
+					<li>
+						<a href="../html/fast entry1.html">购买套餐服务</a>
+					</li>
+					<li>
+						<a href="../html/fast entry2.html">提交域名备案流程</a>
+					</li>
+					<li>
+						<a href="../html/fast entry3.html">申请域名设定服务</a>
+					</li>
+					<li>
+						<a href="http://www.alltoall.net/">在线格式转换</a>
+					</li>
+				</ul>
+
+			</div>
+			<p style="width: 80%;margin: auto;text-align: center;color: lightgray;">拓展您的业务，展示您的风采，或者只是尝试一下新的想法。</p>
+			<p style="width: 80%;margin: auto;text-align: center;color: lightgray;">
+				<a style="color: lightgray;">起飞页自助建站平台</a>，拉近您与互联网的距离！</p>
+			<p style="height: 14px;"></p>
+			<p style="width: 95%;margin: auto;text-align: center;color: lightgray;">版权所有 2013-2016 苏州卡达网络科技有限公司 增值电信业务经营许可证苏B2-20150321 苏ICP备09008221号-3 版本: V3.6</p>
+			<div style="position: relative;left: 95%;top: -10px;">
+				<a href="#"><span class="glyphicon glyphicon-chevron-up" style="color: white;"></span></a>
+			</div>
+		</div>
+		<script type="text/javascript">
+			$(document).scroll(function() {
+				console.log($(document).scrollTop())
+				if(window.innerWidth > 768) {
+					if($(document).scrollTop() >= 300) {
+
+						$(".dd").css({
+							"display": "block"
+						})
+					} else {
+						$(".dd").css({
+							"display": "none"
+						})
+					}
+				} else {
+					$(".dd").css({
+						"display": "none"
+					})
+				}
+
+			});
+			if(window.innerWidth < 768) {
+				$("#cc").html("套餐")
+				$(".ul_d1").css({
+					"display": "none"
+				});
+				$(".nav_a1").css({
+					"background": "black"
+				})
+
+			} else {
+				$("#cc").html('<img src="../image/Wimg/1.png" />')
+				$(".ul_d1").css({
+					"display": "block"
+				});
+			}
+			var a = 0;
+			$("#aa").dblclick(function() {
+				console.log("12")
+				if(window.innerWidth < 768) {
+					if(a == 0) {
+
+						$("#example-navbar-collapse").css({
+							"background": "#0088c2"
+						});
+						$(".qw").css({
+							"display": "none"
+						});
+						$("#cc").html("关闭")
+
+					} else {
+						$("#example-navbar-collapse").css({
+							"background": "rgba(255,255,255,0)"
+						});
+						$(".qw").css({
+							"display": "block"
+						});
+						$("#cc").html("套餐")
+					}
+					a++;
+					if(a > 1) {
+						a = 0
+					}
+					return a;
+				}
+			})
+
+			$("#aa").click(function() {
+				console.log("11")
+				if(window.innerWidth < 768) {
+					if(a == 0) {
+
+						$("#example-navbar-collapse").css({
+							"background": "#0088c2"
+						});
+						$(".qw").css({
+							"display": "none"
+						});
+						$("#cc").html("关闭")
+
+					} else {
+						$("#example-navbar-collapse").css({
+							"background": "rgba(255,255,255,0)"
+						});
+						$(".qw").css({
+							"display": "block"
+						});
+						$("#cc").html("套餐")
+					}
+					a++;
+					if(a > 1) {
+						a = 0
+					}
+					return a;
+				}
+			})
+
+			window.onresize = function() {
+				console.log(window.innerWidth);
+				if(window.innerWidth >= 768) {
+					if(window.innerWidth >= 768 && window.innerWidth <= 997 && $(document).scrollTop() >= 300) {
+						$(".dd").css({
+							"display": "block"
+						})
+						$(".dd table").css({
+							"display": "none"
+						})
+					}
+					if(window.innerWidth >= 997 && $(document).scrollTop() >= 300) {
+						$(".dd").css({
+							"display": "block"
+						})
+						$(".dd table").css({
+							"display": "block"
+						})
+					}
+					$(".qw").css({
+						"display": "none"
+					});
+					$("#cc").html('<img src="../image/Wimg/1.png" />')
+
+					$(".nav_a1").css({
+						"background": "rgba(255,255,255,0)"
+					})
+					$(".ul_d1").css({
+						"display": "block"
+					});
+
+					$("#example-navbar-collapse").css({
+						"background": "rgba(255,255,255,0)"
+					});
+					$(".qw").css({
+						"display": "none"
+					});
+
+				} else {
+					$(".dd").css({
+						"display": "none"
+					})
+					$(".qw").css({
+						"display": "block"
+					});
+					$("#cc").html("套餐")
+					$(".nav_a1").css({
+						"background": "black"
+					})
+					$(".ul_d1").css({
+						"display": "none"
+					});
+					if(a == 1) {
+						$("#example-navbar-collapse").css({
+							"background": "#0088c2"
+						});
+						$(".qw").css({
+							"display": "none"
+						});
+						$("#cc").html("关闭")
+					}
+
+				}
+			}
+			
+			
+			//数据库
+		
+		</script>
+	</body>
+	
+</html>

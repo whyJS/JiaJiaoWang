@@ -1,0 +1,404 @@
+<html>
+	<head>
+		<title>注册页面</title>
+		<meta charset="utf-8"/>
+		<meta name="viewport" content="width=device-width,initial-scale=1">
+		<script type="text/javascript" src="../js/jquery-1.11.1.js"></script>
+		<script type="text/javascript" src="../js/jquery-1.11.3.js"></script>
+		<link rel="stylesheet" type="text/css" href="../dist/css/bootstrap.min.css">
+		<script type="text/javascript" src="../dist/js/bootstrap.min.js"></script>
+		<link rel="stylesheet" href="../css/denglu.css" />
+		<script type="text/javascript" src="../js/denglu.js"></script>
+		<style type="text/css">
+			@media screen and (max-width: 980px) {
+				#nav1
+				{
+					display: none;
+				}
+				#nav_sec
+				{
+					display: block;
+				}
+				#footer{
+					display: none;
+				}
+				#ffooter{
+					margin-top: 50px;
+				}
+				#navTop_u1{
+					display: none;
+				}
+			}
+			
+			
+		</style>
+		<script type="text/javascript">
+			$(function(){
+				$("#zcZhuanDL").click(function(){
+					window.location.href="denglu.html";
+					console.log("aa");
+					return false;
+				});
+				$("#section input").blur(function(){
+					var claNa = $(this).attr("id");
+					
+					if($(this).val() == "")
+					{
+						
+						$("#"+claNa+"_wanner").css({"display":"block"});
+					}else{
+						$("#"+claNa+"_wanner").css({"display":"none"});
+					}
+					
+   					if($("#pwd_zc").val()==$("#pwd_again").val())
+   					{
+   						$("#pwd_again_wanner").css({"display":"none"});
+   					}else{
+   						$("#pwd_again_wanner").css({"display":"block"});
+   					}
+   				});
+   				
+			
+				
+			$("#zhuceBtn").click(function(){
+				
+				var xhr = new XMLHttpRequest();
+				var arrUserName = new Array();
+				var nameX=null;
+				xhr.onreadystatechange = function(){
+					if(xhr.readyState==4)
+					{
+//						console.log("注册成功"+xhr.responseText);
+						var text = xhr.responseText;
+						console.log(text);
+						var jsonObj = JSON.parse(text);
+						console.log(jsonObj);
+						for(var i=0;i<jsonObj.length;i++)
+						{
+							arrUserName[i]=jsonObj[i].name;
+//							arrUserPwd[i]=jsonObj[i].password;
+						}
+						
+						for(var i=0;i<arrUserName.length;i++)
+						{
+							if(uName==arrUserName[i])
+							{
+								nameX = i;
+							}
+						}
+						
+						if(nameX==null)
+						{
+							
+							if(uName=="")
+							{
+								$("#loginFail").modal("toggle");
+								$("#wanner-message").text("用户名不能为空");
+								console.log("aaa");
+							}else{
+								$("#loginFail").modal("toggle");
+								$("#wanner-message").text("注册成功");
+								$("#modal_btn").text("确定");
+							}
+						}else{
+							$("#loginFail").modal("toggle");
+							$("#wanner-message").text("注册失败，用户名已存在");
+						}
+						
+						
+					}
+						
+				}
+			
+				//等到输入的值
+				var uName = document.getElementById("username_zc").value;
+				var uname = "uname="+encodeURIComponent(document.getElementById("username_zc").value);
+				var pwd = "pwd="+encodeURIComponent(document.getElementById("pwd_zc").value);
+				xhr.open("post","http://localhost/QFY/html/zhuce.php");
+				xhr.setRequestHeader("Content-type","application/x-www-form-urlencoded");
+				var str = uname+"&"+pwd;
+   				xhr.send(str);
+				return false;
+			});
+				
+
+			
+		
+	});		
+		</script>
+	</head>
+	<body>
+	//注册时提示错误框
+		<div class="modal fade" id="loginFail">
+			<div class="modal-dialog">
+				<div class="modal-content">
+					<div class="modal-header">
+						<button class="close" data-dismiss="modal">X</button>
+					</div>
+					<div class="modal-body" id="wanner-message" style="text-align: center;">
+						
+					</div>
+					<div class="modal-footer">
+						<button id="modal_btn" class="btn btn-primary" data-dismiss="modal">重新输入</button>
+					</div>
+				</div>
+				
+			</div>
+		</div>
+		<nav id="nav1">
+			<ul id="header_u1" >
+						<li id="header_u1_l1"><img src="../image/image2/logo.png" alt="" /></li>
+						<li><a href="homepage.html">首页</a></li>
+						<li><a href="">模板</a></li>
+						<li><a href="">套餐</a></li>
+						<li><a href="">概述</a></li>
+						<li><a href="">案例</a></li>
+						<li><a href="">教程</a></li>
+						<ul id="header_u2" >
+							<li style="margin-right:20px;">
+								<a href="denglu.html">登录</a>
+							</li>
+							<li>
+								<a href="#">注册</a>
+							</li>
+						</ul>
+			</ul>
+		</nav>
+		<div id="nav_sec" >
+			<div id="nav_top">
+				<span style="margin-left: 20px;cursor: pointer;" id="nav_top_sp1">首页</span>
+				<img id="nav_top_img1" src="../image/image2/xia.png" alt="" style="float: right;margin-right: 25px;margin-top: 15px;"class="img-responsive"/>
+				<div id="drop_d1">
+					<ul>
+						<li style="margin-top: 10px;"><a href="homepage.html">首页</a></li>
+						<li><a href="">模板</a></li>
+						<li><a href="">套餐</a></li>
+						<li><a href="">概述</a></li>
+						<li><a href="">案例</a></li>
+						<li><a href="">教程</a></li>
+					</ul>
+				</div>
+			</div>
+			<div id="nav_d2">
+				<img id="nav_d2_img1" src="../image/image2/logo.png"/>
+				<img id="nav_d2_img2" src="../image/image2/qifeiye.png" alt="" class="img-responsive"/>
+			</div>
+			<div id="nav_d3">
+				
+			</div>
+		</div>
+		
+		
+		<div id="section">
+			<div id="section_d1">
+				<span>从这里开启建站之旅</span>
+			</div>
+			<div class="container-fluid" style="width:50%;border: 1px solid rgb(204,204,204);margin-top: 50px;">
+				<div style="margin-top: 15px;">
+					其他账号登录：<a href=""><img src="../image/image2/qq_login.png" title="使用腾讯qq登录" id="qq"/></a>
+				</div>
+				<form role = "form" class="form-horizontal">
+					<div class="form-group" >
+						<label for="uername_zc" class="col-sm-3 control-label" style="text-align: left;font-weight: normal;">电子邮箱&nbsp;<span style="color: red;">*</span></label>
+						<div class="col-sm-7" style="float: right;">
+							<input id="username_zc" class="form-control col-sm-7" />
+						</div>
+					</div>
+					<div  class="form-group " style="width: 85%;display: none;" id="username_zc_wanner">
+						<label class="col-sm-3 control-label"></label>
+						<div  class="col-sm-5" style="float:right;color: white;background: rgb(202,69,69);text-align: center;border-radius: 5px;font-size: 15px;">
+							此项必须填写
+						</div>
+					</div>
+					
+					<div class="form-group" >
+						<label for="pwd_zc" class="col-sm-3 control-label" style="text-align: left;font-weight: normal;">密码&nbsp;<span style="color: red;">*</span></label>
+						<div class="col-sm-7" style="float: right;">
+							<input type="password" id="pwd_zc" class="form-control col-sm-7" />
+						</div>
+					</div>
+					<div class="form-group" style="width: 85%;display: none;" id="pwd_zc_wanner"> 
+						<label class="col-sm-3 control-label"></label>
+						<div class="col-sm-5" style="float:right;color: white;background: rgb(202,69,69);text-align: center;border-radius: 5px;font-size: 15px;">
+							此项必须填写
+						</div>
+					</div>
+					<div class="form-group" >
+						<label for="pwd_again" class="col-sm-3 control-label" style="text-align: left;font-weight: normal;">再次输入密码&nbsp;<span style="color: red;">*</span></label>
+						<div class="col-sm-7" style="float: right;">
+							<input id="pwd_again" class="form-control col-sm-7" />
+						</div>
+					</div>
+					<div class="form-group" style="width: 85%;display: none;" id="pwd_again_wanner"> 
+						<label class="col-sm-3 control-label"></label>
+						<div class="col-sm-5" style="float:right;color: white;background: rgb(202,69,69);text-align: center;border-radius: 5px;font-size: 15px;">
+							前后密码不一致
+						</div>
+					</div>
+					<div class="form-group" >
+						<label for="answer" class="col-sm-3 control-label" style="text-align: left;font-weight: normal;">验证问题&nbsp;<span style="color: red;">*</span></label>
+						<div class="col-sm-7" style="float: right;">
+							<input id="answer" class="form-control col-sm-7" />
+						</div>
+					</div>
+					<div class="form-group" style="width: 85%;display: none;" id="answer_wanner">
+						<label class="col-sm-3 control-label"></label>
+						<div class="col-sm-5" style="float:right;color: white;background: rgb(202,69,69);text-align: center;border-radius: 5px;font-size: 15px;">
+							此项必须填写
+						</div>
+					</div>
+					<hr />
+					<div class="checkbox">
+						<label>
+							<input type="checkbox"/><a href="" style="text-decoration: none;color: gray;">我已经阅读并同意服务条款以及法律声明。我不会创建含有低俗内容及有碍社会安定内容的网站。</a>
+						</label>
+					</div>
+					<hr />
+					<div style="margin-bottom: 15px;">
+						<!--<button class="btn btn-primary btn-sm active" onclick="postInfo()">注册</button>-->
+						<!--<input id="zhuceBtn" type="button" value="注册" onclick="postInfo()" style="background: rgb(54,134,190);color: white;border: 1px solid rgb(54,134,190);outline: none;"/>-->
+							<button class="btn btn-primary btn-sm active " id="zhuceBtn" >注册</button>
+							<button class="btn btn-md col-xs-5" style="background: white;border: 1px solid rgb(221,221,221);float: right;" id="zcZhuanDL">已经有账号了？请登录</button>
+					</div>
+				</form>
+				
+			</div>
+		</div>
+		
+		<div style="width: 100%;margin-top: 100px;" id="footer" >
+			<div class="container-fluid" id="footer_d1" style="padding-bottom:50px;width: 95%;margin: auto;background: rgb(45,44,44);">
+				
+					<ul style="width: 100%;margin-top: 35px;" id="footer_d1_u1">
+						<li style="width: 32%;" >
+							<ul style="width: 100%;" id="footer_d1_u1_u1">
+								<li style="font-size: 20px;font-weight: 700;color: white;margin-top: 15px;">
+									起飞页 · 优雅做网站
+								</li>
+								<li style="color: gray;margin-top: 30px;">
+									一款简洁美观的自助建站平台，一种轻松优雅的网站制作方式，解决互联网20年发展路上的古老难题——建站
+								</li>
+								<li style="font-size: 14px;color: white;margin-top: 35px;">
+									QQ 客服： 800088546
+								</li>
+								<li style="font-size: 14px;color: white;">
+									客服热线： 4006-285-729 或 0512-62969169
+								</li>
+								<li style="font-size: 14px;color: white;margin-top: 30px;">
+									合作伙伴：<br>
+									<img src="../image/image2/payp.png" alt="" style="width: 92px;height: 32px;"/>
+									<img src="../image/image2/faliyun.png" alt="" style="width: 59px;height: 33px;"/>
+								</li>
+								
+							</ul>
+						</li>
+						<li style="width: 8%;margin-left: 8%;" >
+							<ul style="width: 100%;margin-top: 0px;" id="footer_d1_u1_u2">
+								<li style="font-size: 16px;font-weight: bold;color: white;">
+									公司信息
+								</li>
+								<li style="font-size: 14px;color: gray;">
+									<a href="">公司介绍</a>
+								</li>
+								<li style="font-size: 14px;color: gray;">
+									<a href="">服务条款</a>
+								</li>
+								<li style="font-size: 14px;color: gray;">
+									<a href="">法律声明</a>
+								</li>
+								<li style="font-size: 14px;color: gray;">
+									<a href="">可接受服务</a>
+								</li>
+								<li style="font-size: 14px;color: gray;">
+									<a href="">免责声明</a>
+								</li>
+							</ul>
+						</li>
+						<li style="width: 7%;margin-left: 10%;">
+							<ul style="width: 100%;margin-top: 0px;" id="footer_d1_u1_u3">
+								<li style="font-size: 16px;font-weight: bold;color: white;">
+									技术支持
+								</li>
+								<li style="font-size: 14px;color: gray;">
+									<a href="">联系客服</a>
+								</li>
+								<li style="font-size: 14px;color: gray;">
+									<a href="">知识库</a>
+								</li>
+								<li style="font-size: 14px;color: gray;">
+									<a href="">更新日志</a>
+								</li>
+								<li style="font-size: 14px;color: gray;">
+									<a href="">建站网城</a>
+								</li>
+								<li style="font-size: 14px;color: gray;">
+									<a href="">博客</a>
+								</li>
+							</ul>
+						</li>
+						<li style="width: 12%;margin-left: 10%;">
+							<ul style="width: 100%;margin-top: 0px;"id="footer_d1_u1_u4">
+								<li style="font-size: 16px;font-weight: bold;color: white;">
+									快速入口
+								</li>
+								<li style="font-size: 14px;color: gray;">
+									<a href="">购买套餐和服务</a>
+								</li>
+								<li style="font-size: 14px;color: gray;">
+									<a href="">提交域名备案流程</a>
+								</li>
+								<li style="font-size: 14px;color: gray;">
+									<a href="">申请域名设定服务</a>
+								</li>
+								<li style="font-size: 14px;color: gray;">
+									<a href="">在线格式转换</a>
+								</li>
+							</ul>
+						</li>
+					</ul>
+				
+			</div>
+		</div>
+		<div id="ffooter">
+			<div class="container-fluid" style="color: #cecece;text-align: center;">
+				<br>
+					<br>
+				<span style="font-size: 14px;">拓展您的业务，展示您的风采，或者只是尝试一下新的想法。</span>
+				<br>
+				<span style="font-size: 14px;">起飞页自助建站平台，拉近您与互联网的距离！</span>
+				<br>
+					<br>
+				<span style="font-size: 12px;">版权所有 2013-2016 苏州卡达网络科技有限公司   增值电信业务经营许可证苏B2-20150321 苏ICP备09008221号-3 版本: V3.6</span>
+			</div>
+		</div>
+		
+		<div id="navTop">
+				
+			<div >
+			
+				<img style="margin-left:44px;margin-top:5px;width: 150px;height: 50px;float: left;" src="../image/image2/aHR0cDovL3d3dy5xaWZlaXllLmNvbS9xZnktY29udGVudC91cGxvYWRzLzIwMTUvMDgvZjQ3ZDY1MjU3YzEyN2YzY2YxNjUzYjE1NjQ4MDE2YWQucG5n.png" alt="" />
+
+				<ul id="navTop_u1" style="float: right;">
+					<li id="navTop_u1_l1">
+						<a href="homepage.html" class="nav-a"><span>首页</span><span class="border" style="margin-top: 15px;margin-left: -9px;"></span></a>
+						
+					</li>
+					<li id="navTop_u1_l2">
+						<a href="#" class="nav-a"><span>模板</span><span class="border" style="margin-top: 15px;margin-left: -9px;"></span></a>
+					</li>
+					<li id="navTop_u1_l3">
+						<a href="#" class="nav-a"><span>套餐</span><span class="border" style="margin-top: 15px;margin-left: -9px;"></span></a>
+					</li>
+					<li id="navTop_u1_l4">
+						<a href="#" class="nav-a"><span>概述</span><span class="border" style="margin-top: 15px;margin-left: -9px;"></span></a>
+					</li>
+					<li id="navTop_u1_l5">
+						<a href="#" class="nav-a"><span>案例</span><span class="border" style="margin-top: 15px;margin-left: -9px;"></span></a>
+					</li>
+					<li style="margin-right: 50px;" id="navTop_u1_l6">
+						<a href="#" class="nav-a"><span>教程</span><span class="border" style="margin-top: 15px;margin-left: -9px;"></span></a>
+					</li>
+				</ul>
+			</div>	
+		</div>
+	</body>
+</html>
